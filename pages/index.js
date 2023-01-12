@@ -1,1 +1,2 @@
-export default function Home() {}
+import Home from "src/pages/home/home";
+export default Home;
