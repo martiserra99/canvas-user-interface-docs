@@ -1,0 +1,10 @@
+@use "styles/variables" as *;
+
+.content {
+  padding: 0 $margin;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}

@@ -2,6 +2,8 @@ import "styles/globals.scss";
 
 import Head from "next/head";
 
+import Layout from "src/layout/layout";
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -15,7 +17,9 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta charSet="utf-8" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

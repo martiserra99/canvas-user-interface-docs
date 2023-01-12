@@ -1,0 +1,16 @@
+@use "styles/variables" as *;
+
+.header {
+  height: $header-height;
+  padding: 0 $margin;
+  border-bottom: 0.1rem solid $color-divider;
+}
+
+.content {
+  height: calc(100% + 1px);
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

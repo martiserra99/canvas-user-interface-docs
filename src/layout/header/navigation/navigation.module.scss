@@ -1,0 +1,56 @@
+@use "styles/variables" as *;
+
+.navigation {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.links {
+  display: flex;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: $color-primary;
+  text-decoration: none;
+  padding: 0 1.6rem;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &.selected {
+    color: $color-accent;
+    border-bottom: 1px solid $color-accent;
+  }
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  fill: $color-secondary;
+  transition: all 0.2s ease;
+
+  &:hover {
+    fill: $color-primary;
+  }
+
+  > * {
+    width: 2rem;
+    height: 2rem;
+  }
+}
