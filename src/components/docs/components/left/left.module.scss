@@ -22,18 +22,16 @@
   list-style: none;
 }
 
-.pages {
-  list-style: none;
-}
-
 .heading {
   font-size: 1.3rem;
   font-weight: 500;
   color: $color-primary;
   padding: 0.4rem 0;
+  line-height: 1.95rem;
 }
 
 .pages {
+  list-style: none;
   display: flex;
   flex-direction: column;
 }
@@ -45,9 +43,10 @@
   text-decoration: none;
   font-weight: 400;
   padding: 0.4rem 0;
+  line-height: 1.95rem;
   transition: all 0.2s ease;
 
   &:hover {
-    color: $color-accent;
+    color: $color-primary;
   }
 }

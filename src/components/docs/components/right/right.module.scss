@@ -3,9 +3,49 @@
 .right {
   padding-right: $margin;
   width: calc(#{$margin} + 27rem);
+  padding-top: 3.2rem;
+  padding-bottom: 9.6rem;
 
   @media (min-width: 1428px /* 1428px = $max-width + $margin * 2 */) {
     padding-right: calc((100% - #{$max-width}) / 2);
     width: calc((100% - #{$max-width}) / 2 + 27rem);
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-primary;
+  padding: 0.4rem 0;
+  line-height: 1.95rem;
+  letter-spacing: 0.04rem;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.subsections {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.3rem;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.4rem 0;
+  line-height: 1.95rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color-primary;
   }
 }
