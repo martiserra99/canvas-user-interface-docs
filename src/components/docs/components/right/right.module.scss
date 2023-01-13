@@ -6,7 +6,7 @@
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
 
-  @media (min-width: 1428px /* 1428px = $max-width + $margin * 2 */) {
+  @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
     padding-right: calc((100% - #{$max-width}) / 2);
     width: calc((100% - #{$max-width}) / 2 + 27rem);
   }
