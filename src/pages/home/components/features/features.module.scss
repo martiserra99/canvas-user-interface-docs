@@ -6,16 +6,16 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  max-width: 420px;
+  max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 650px) {
+  @media (min-width: 40.625em /* 650px */) {
     flex-direction: row;
     max-width: none;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 62.5em /* 1000px */) {
     gap: 6.5rem;
   }
 }
@@ -27,7 +27,7 @@
     color: $color-primary;
     margin-bottom: 0.8rem;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 62.5em /* 1000px */) {
       font-size: 2rem;
     }
   }
@@ -37,7 +37,7 @@
     line-height: 2.6rem;
     color: $color-secondary;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 62.5em /* 1000px */) {
       font-size: 1.6rem;
     }
   }
