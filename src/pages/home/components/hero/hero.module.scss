@@ -1,26 +1,46 @@
 @use "styles/variables" as *;
 
 .hero {
-  padding-top: 20rem;
-  padding-bottom: 15rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   border-bottom: 1px solid $color-divider;
+
+  @media (min-width: 1000px) {
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+  }
 }
 
 .headline {
   color: $color-primary;
   text-align: center;
   font-weight: 800;
-  font-size: 6.8rem;
-  line-height: 8.4rem;
+  font-size: 4.4rem;
+  line-height: 5.4rem;
   margin-bottom: 3rem;
+
+  @media (min-width: 500px) {
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 6.8rem;
+    line-height: 8.4rem;
+  }
 }
 
 .subheadline {
   color: $color-secondary;
-  font-size: 2rem;
-  line-height: 3.3rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
   text-align: center;
   margin-bottom: 4rem;
+
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+    line-height: 3.3rem;
+  }
 }
 
 .links {
@@ -30,7 +50,7 @@
 }
 
 .link {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: white;
   background-color: $color-accent;
@@ -39,6 +59,10 @@
   border-radius: 1rem;
   transition: all 0.3s ease;
 
+  @media (min-width: 1000px) {
+    font-size: 1.6rem;
+  }
+
   &:hover {
     opacity: 0.8;
   }
@@ -46,5 +70,21 @@
   &.secondary {
     color: $color-accent;
     background-color: rgba($color-accent, 0.1);
+  }
+
+  &:nth-child(2) {
+    display: none;
+
+    @media (min-width: 350px) {
+      display: block;
+    }
+  }
+
+  &:nth-child(3) {
+    display: none;
+
+    @media (min-width: 500px) {
+      display: block;
+    }
   }
 }
