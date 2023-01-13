@@ -5,10 +5,49 @@
   border-right: 0.1rem solid $color-divider;
   padding-left: $margin;
   width: calc(#{$margin} + 27rem);
+  padding-top: 3.2rem;
+  padding-bottom: 9.6rem;
   overflow: auto;
 
   @media (min-width: 1428px /* 1428px = $max-width + $margin * 2 */) {
     padding-left: calc((100% - #{$max-width}) / 2);
     width: calc((100% - #{$max-width}) / 2 + 27rem);
+  }
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.pages {
+  list-style: none;
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $color-primary;
+  padding: 0.4rem 0;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.4rem 0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color-accent;
   }
 }
