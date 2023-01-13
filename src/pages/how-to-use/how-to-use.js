@@ -1,3 +1,5 @@
+import Docs from "src/components/docs/docs";
+
 export default function HowToUse() {
-  return <h1>HowToUse</h1>;
+  return <Docs />;
 }

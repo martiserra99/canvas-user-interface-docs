@@ -1,0 +1,14 @@
+@use "styles/variables" as *;
+
+.left {
+  height: calc(100vh - $header-height);
+  border-right: 0.1rem solid $color-divider;
+  padding-left: $margin;
+  width: calc(#{$margin} + 27rem);
+  overflow: auto;
+
+  @media (min-width: 1428px /* 1428px = $max-width + $margin * 2 */) {
+    padding-left: calc((100% - #{$max-width}) / 2);
+    width: calc((100% - #{$max-width}) / 2 + 27rem);
+  }
+}

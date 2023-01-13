@@ -1,0 +1,11 @@
+@use "styles/variables" as *;
+
+.right {
+  padding-right: $margin;
+  width: calc(#{$margin} + 27rem);
+
+  @media (min-width: 1428px /* 1428px = $max-width + $margin * 2 */) {
+    padding-right: calc((100% - #{$max-width}) / 2);
+    width: calc((100% - #{$max-width}) / 2 + 27rem);
+  }
+}
