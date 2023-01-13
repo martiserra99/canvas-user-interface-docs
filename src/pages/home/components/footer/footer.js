@@ -16,7 +16,7 @@ export default function Footer() {
         .
       </p>
       <p className={styles.text}>
-        Copyright © 2023{" "}
+        Copyright © {new Date().getFullYear()}{" "}
         <a
           href="https://www.linkedin.com/in/mart%C3%AD-serra-molina-3ababa23a/"
           target="_blank"
