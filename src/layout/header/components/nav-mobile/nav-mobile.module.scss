@@ -1,0 +1,74 @@
+@use "styles/variables" as *;
+
+.nav {
+  position: fixed;
+  inset: 0;
+  top: $header-height;
+  opacity: 0;
+  background: white;
+  padding-top: 4rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+
+  &.open {
+    opacity: 1;
+  }
+
+  @media (min-width: 43.75em /* 700px */) {
+    display: none;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.75rem;
+}
+
+.link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 6rem;
+  font-size: 1.4rem;
+  color: $color-primary;
+  text-decoration: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid $color-divider;
+  transition: all 0.2s ease;
+
+  &.selected {
+    color: $color-accent;
+    border-bottom: 1px solid $color-accent;
+  }
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  fill: $color-secondary;
+  transition: all 0.2s ease;
+
+  &:hover {
+    fill: $color-primary;
+  }
+
+  > * {
+    width: 2rem;
+    height: 2rem;
+  }
+}

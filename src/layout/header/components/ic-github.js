@@ -1,4 +1,4 @@
-export default function GithubIcon({ fill = "black" }) {
+export default function IcGithub({ fill = "black" }) {
   return (
     <svg
       width="24"

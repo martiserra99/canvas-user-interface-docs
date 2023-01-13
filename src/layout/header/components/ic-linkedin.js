@@ -1,4 +1,4 @@
-export default function LinkedinIcon({ fill = "black" }) {
+export default function IcLinkedin({ fill = "black" }) {
   return (
     <svg
       width="24"

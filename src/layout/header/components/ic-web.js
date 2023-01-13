@@ -1,4 +1,4 @@
-export default function WebIcon({ fill = "black" }) {
+export default function IcWeb({ fill = "black" }) {
   return (
     <svg
       width="24"

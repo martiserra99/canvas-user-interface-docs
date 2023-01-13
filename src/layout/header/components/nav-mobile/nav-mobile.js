@@ -1,13 +1,16 @@
-import styles from "./navigation.module.scss";
+import styles from "./nav-mobile.module.scss";
 
 import Link from "next/link";
-import GithubIcon from "src/components/github-icon";
-import LinkedinIcon from "src/components/linkedin-icon";
-import WebIcon from "src/components/web-icon";
 
-export default function Navigation() {
+import IcGithub from "../ic-github";
+import IcLinkedin from "../ic-linkedin";
+import IcWeb from "../ic-web";
+
+export default function NavMobile({ open }) {
+  let className = styles.nav;
+  if (open) className += " " + styles.open;
   return (
-    <nav className={styles.navigation}>
+    <div className={className}>
       <div className={styles.links}>
         <Link href="/" className={styles.link + " " + styles.selected}>
           How To Use
@@ -21,15 +24,15 @@ export default function Navigation() {
       </div>
       <div className={styles.icons}>
         <a href="#" className={styles.icon}>
-          <GithubIcon fill="inherit" />
+          <IcGithub fill="inherit" />
         </a>
         <a href="#" className={styles.icon}>
-          <LinkedinIcon fill="inherit" />
+          <IcLinkedin fill="inherit" />
         </a>
         <a href="#" className={styles.icon}>
-          <WebIcon fill="inherit" />
+          <IcWeb fill="inherit" />
         </a>
       </div>
-    </nav>
+    </div>
   );
 }

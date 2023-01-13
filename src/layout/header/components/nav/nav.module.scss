@@ -1,9 +1,13 @@
 @use "styles/variables" as *;
 
-.navigation {
+.nav {
+  display: none;
   height: 100%;
-  display: flex;
   gap: 2rem;
+
+  @media (min-width: 43.75em /* 700px */) {
+    display: flex;
+  }
 }
 
 .links {

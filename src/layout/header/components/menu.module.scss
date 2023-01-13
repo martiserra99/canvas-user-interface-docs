@@ -1,0 +1,28 @@
+@use "styles/variables" as *;
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -0.4rem;
+  padding: 0.4rem;
+  background: transparent;
+  border: none;
+  fill: $color-primary;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    fill-opacity: 0.8;
+  }
+
+  @media (min-width: 43.75em /* 700px */) {
+    display: none;
+  }
+}
+
+.svg {
+  fill: inherit;
+  width: 2.8rem;
+  height: 2.8rem;
+}
