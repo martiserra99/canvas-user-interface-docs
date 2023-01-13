@@ -1,2 +1,1 @@
-import Elements from "src/pages/elements/elements";
-export default Elements;
+export { default as Elements } from "src/pages/elements/elements";
