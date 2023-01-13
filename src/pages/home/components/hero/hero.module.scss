@@ -1,0 +1,50 @@
+@use "styles/variables" as *;
+
+.hero {
+  padding-top: 20rem;
+  padding-bottom: 15rem;
+  border-bottom: 1px solid $color-divider;
+}
+
+.headline {
+  color: $color-primary;
+  text-align: center;
+  font-weight: 800;
+  font-size: 6.8rem;
+  line-height: 8.4rem;
+  margin-bottom: 3rem;
+}
+
+.subheadline {
+  color: $color-secondary;
+  font-size: 2rem;
+  line-height: 3.3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+}
+
+.link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background-color: $color-accent;
+  text-decoration: none;
+  padding: 1.2rem 3.2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.secondary {
+    color: $color-accent;
+    background-color: rgba($color-accent, 0.1);
+  }
+}

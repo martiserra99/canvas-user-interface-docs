@@ -1,0 +1,23 @@
+@use "styles/variables" as *;
+
+.features {
+  margin-top: 8rem;
+  margin-bottom: 12rem;
+  display: flex;
+  gap: 6.5rem;
+}
+
+.feature {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-primary;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: $color-secondary;
+  }
+}

@@ -1,0 +1,21 @@
+@use "styles/variables" as *;
+
+.footer {
+  border-top: 1px solid $color-divider;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: $color-secondary;
+
+  .link {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}

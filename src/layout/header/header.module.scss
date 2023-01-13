@@ -1,7 +1,13 @@
 @use "styles/variables" as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   height: $header-height;
+  background: white;
   padding: 0 $margin;
   border-bottom: 0.1rem solid $color-divider;
 }
