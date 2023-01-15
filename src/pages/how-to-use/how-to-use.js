@@ -3,7 +3,7 @@ import getSectionsLeft from "src/docs/get-sections-left";
 import Docs from "src/components/docs/docs";
 
 export default function HowToUse({ sections }) {
-  return <Docs sections={sections} />;
+  return <Docs slug="how-to-use" sections={sections} />;
 }
 
 export function getStaticPaths() {

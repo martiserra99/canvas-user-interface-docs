@@ -3,7 +3,7 @@ import styles from "./left.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Left({ sections }) {
+export default function Left({ slug, sections }) {
   const router = useRouter();
   return (
     <nav className={styles.left}>
@@ -15,7 +15,7 @@ export default function Left({ sections }) {
               {section.subsections.map((subsection) => (
                 <li key={subsection.slug}>
                   <Link
-                    href={`/how-to-use/${subsection.slug}`}
+                    href={`/${slug}/${section.slug}/${subsection.slug}`}
                     className={linkClassName(
                       router,
                       section.slug,
