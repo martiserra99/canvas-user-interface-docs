@@ -8,7 +8,11 @@ export default function Elements({ sections }) {
 
 export function getStaticPaths() {
   return {
-    paths: [{ params: { section: "views", subsection: "area" } }],
+    paths: getSectionsLeft("2.elements").flatMap((section) =>
+      section.subsections.map((subsection) => ({
+        params: { section: section.slug, subsection: subsection.slug },
+      }))
+    ),
     fallback: false,
   };
 }

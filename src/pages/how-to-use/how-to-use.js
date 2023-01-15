@@ -8,7 +8,11 @@ export default function HowToUse({ sections }) {
 
 export function getStaticPaths() {
   return {
-    paths: [{ params: { section: "getting-started", subsection: "overview" } }],
+    paths: getSectionsLeft("1.how-to-use").flatMap((section) =>
+      section.subsections.map((subsection) => ({
+        params: { section: section.slug, subsection: subsection.slug },
+      }))
+    ),
     fallback: false,
   };
 }
