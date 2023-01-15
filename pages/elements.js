@@ -1,1 +1,1 @@
-export { default as Elements } from "src/pages/elements/elements";
+export { default } from "src/pages/elements/elements";
