@@ -1,0 +1,4 @@
+---
+slug: view
+name: View
+---
