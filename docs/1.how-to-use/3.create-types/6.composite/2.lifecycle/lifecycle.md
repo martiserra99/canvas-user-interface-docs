@@ -6,17 +6,17 @@ name: Lifecycle
 
 The composite element goes through different lifecycle states and it performs different tasks in each one of them:
 
-- _Create_: It may perform some initial tasks and store some data if needed. Then, it creates an element. In case that the element is a layout it may create the elements the layout contains (most likely).
+- **Create**: It may perform some initial tasks and store some data if needed. Then, it creates an element. In case that the element is a layout it may create the elements the layout contains (most likely).
 
-- _Start_: It may compute and store some data that may be used for the next states. Then, it updates the element and the elements it contains (in case that the element is a layout) and it calls the `.start()` method on the element.
+- **Start**: It may compute and store some data that may be used for the next states. Then, it updates the element and the elements it contains (in case that the element is a layout) and it calls the `.start()` method on the element.
 
-- _Measure_: It calls the `.measure(maxSize)` method on the element with the maximum size that was passed in its `.measure(maxSize)` method. Then, the size of the element is assigned to its `size` property.
+- **Measure**: It calls the `.measure(maxSize)` method on the element with the maximum size that was passed in its `.measure(maxSize)` method. Then, the size of the element is assigned to its `size` property.
 
-- _Locate_: It calls the `.locate(coords)` method on the element with the coords that were passed in its `.locate(coords)` method. Then, the coords of the element are assigned to its `coords` property.
+- **Locate**: It calls the `.locate(coords)` method on the element with the coords that were passed in its `.locate(coords)` method. Then, the coords of the element are assigned to its `coords` property.
 
-- _Draw_: It calls the `.draw(ctx)` method on the element with the canvas context that was passed in its `.draw(ctx)` method.
+- **Draw**: It calls the `.draw(ctx)` method on the element with the canvas context that was passed in its `.draw(ctx)` method.
 
-- _End_: It may perform some final tasks that may be needed. Then, it calls the `.end()` method on the element.
+- **End**: It may perform some final tasks that may be needed. Then, it calls the `.end()` method on the element.
 
 To perform these tasks the composite will call its lifecycle functions. These functions are implemented differently by every composite type and to implemenet them you have to use the `.lifecycle.set(name, func)` method, like so:
 

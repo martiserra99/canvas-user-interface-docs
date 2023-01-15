@@ -8,13 +8,13 @@ Before explaining how to create events you have to understand what are signals a
 
 Every time that an action occurs on the user interface the UI will send a signal to the element calling the `.signal(signal)` method of the element. There are different types of actions that can occur and these are:
 
-- _mousedown_: The mouse button is pressed inside the user interface.
-- _mouseup_: The mouse button is released inside the user interface.
-- _mousemove_: The mouse is moved inside the user interface.
-- _mouseenter_: The mouse enters the user interface.
-- _mouseleave_: The mouse leaves the user interface.
-- _keydown_: A key is pressed.
-- _keyup_: A key is released.
+- **mousedown**: The mouse button is pressed inside the user interface.
+- **mouseup**: The mouse button is released inside the user interface.
+- **mousemove**: The mouse is moved inside the user interface.
+- **mouseenter**: The mouse enters the user interface.
+- **mouseleave**: The mouse leaves the user interface.
+- **keydown**: A key is pressed.
+- **keyup**: A key is released.
 
 When calling the `.signal(signal)` method on the element the UI will pass as argument an object with these properties:
 

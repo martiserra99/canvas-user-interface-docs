@@ -6,17 +6,17 @@ name: Lifecycle
 
 The view element goes through different lifecycle states and it performs different tasks in each one of them:
 
-- _Create_: It may perform some initial tasks and store some data if needed.
+- **Create**: It may perform some initial tasks and store some data if needed.
 
-- _Start_: It may compute and store some data that may be used for the next states.
+- **Start**: It may compute and store some data that may be used for the next states.
 
-- _Measure_: It computes the size that it has to be taking into consideration the maximum size that was passed in its `.measure(maxSize)` method and assigns it to its `size` property.
+- **Measure**: It computes the size that it has to be taking into consideration the maximum size that was passed in its `.measure(maxSize)` method and assigns it to its `size` property.
 
-- _Locate_: It assigns the coords that were passed in its `.locate(coords)` method to its `coords` property.
+- **Locate**: It assigns the coords that were passed in its `.locate(coords)` method to its `coords` property.
 
-- _Draw_: It draws itself on the canvas using the canvas context that was passed in its `.draw(ctx)` method.
+- **Draw**: It draws itself on the canvas using the canvas context that was passed in its `.draw(ctx)` method.
 
-- _End_: It may perform some final tasks that may be needed.
+- **End**: It may perform some final tasks that may be needed.
 
 To perform these tasks the view will call its lifecycle functions. These functions are implemented differently by every view type and to implement them you have to use the `.lifecycle.set(name, func)` method, like so:
 

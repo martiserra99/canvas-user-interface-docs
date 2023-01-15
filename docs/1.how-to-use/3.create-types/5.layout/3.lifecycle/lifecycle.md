@@ -6,17 +6,17 @@ name: Lifecycle
 
 The layout element goes through different lifecycle states and it performs different tasks in each one of them:
 
-- _Create_: It may perform some initial tasks and store some data if needed.
+- **Create**: It may perform some initial tasks and store some data if needed.
 
-- _Start_: It may compute and store some data that may be used for the next states. After that, it iterates over every child and calls the `.start()` method on each child.
+- **Start**: It may compute and store some data that may be used for the next states. After that, it iterates over every child and calls the `.start()` method on each child.
 
-- _Measure_: It iterates over every child and for each one of them it computes the maximum size that the child is allowed to be and calls its `.measure(maxSize)` method. Then, it computes its size taking into consideration the maximum size that was passed in its `.measure(maxSize)` method and assigns it to its `size` property.
+- **Measure**: It iterates over every child and for each one of them it computes the maximum size that the child is allowed to be and calls its `.measure(maxSize)` method. Then, it computes its size taking into consideration the maximum size that was passed in its `.measure(maxSize)` method and assigns it to its `size` property.
 
-- _Locate_: It iterates over every child and for each one of them it computes the coords in which the child has to be located and calls its `.locate(coords)` method. Then, it assigns the coords that were passed in its `.locate(coords)` method to its `coords` property.
+- **Locate**: It iterates over every child and for each one of them it computes the coords in which the child has to be located and calls its `.locate(coords)` method. Then, it assigns the coords that were passed in its `.locate(coords)` method to its `coords` property.
 
-- _Draw_: It draws itself on the canvas using the canvas context that was passed in its `.draw(ctx)` method. Then, it iterates over every child and for each one of them it calls its `.draw(ctx)` method.
+- **Draw**: It draws itself on the canvas using the canvas context that was passed in its `.draw(ctx)` method. Then, it iterates over every child and for each one of them it calls its `.draw(ctx)` method.
 
-- _End_: It may perform some final tasks that may be needed. Then, it iterates over every child and for each one of them it calls its `end()` method.
+- **End**: It may perform some final tasks that may be needed. Then, it iterates over every child and for each one of them it calls its `end()` method.
 
 To perform these tasks the layout will call its lifecycle functions. These functions are implemented differently by every layout type and to implemenet them you have to use the `.lifecycle.set(name, func)` method, like so:
 
