@@ -29,7 +29,7 @@ export default function Steps() {
             Place them in the way you want them to be.
           </p>
           <Code language="javascript">
-            {`image.layoutParams.set("gravity", {\n  horizontal: "middle",\n  vertical: "middle",\n});`}
+            {`image.layoutParams.set("align", {\n  horizontal: "middle",\n  vertical: "middle",\n});`}
           </Code>
         </div>
       </div>
