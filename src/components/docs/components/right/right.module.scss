@@ -2,6 +2,7 @@
 
 .right {
   padding-right: $margin;
+  height: auto;
   width: calc(#{$margin} + 27rem);
   flex-shrink: 0;
   padding-top: 3.2rem;
@@ -11,6 +12,11 @@
     padding-right: calc((100% - #{$max-width}) / 2);
     width: calc((100% - #{$max-width}) / 2 + 27rem);
   }
+}
+
+.content {
+  position: sticky;
+  top: calc($header-height + 2rem);
 }
 
 .title {
