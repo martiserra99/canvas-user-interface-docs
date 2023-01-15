@@ -3,6 +3,7 @@
 .right {
   padding-right: $margin;
   width: calc(#{$margin} + 27rem);
+  flex-shrink: 0;
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
 

@@ -5,6 +5,7 @@
   border-right: 0.1rem solid $color-divider;
   padding-left: $margin;
   width: calc(#{$margin} + 27rem);
+  flex-shrink: 0;
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
   overflow: auto;
