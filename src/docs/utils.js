@@ -2,6 +2,15 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
+export function docsDir(docsSlug) {
+  return slugToDir(rootDir(), docsSlug);
+}
+
+export function pageDir(docsSlug, sectionSlug, subsectionSlug) {
+  const sectionDir = slugToDir(docsDir(docsSlug), sectionSlug);
+  return slugToDir(sectionDir, subsectionSlug);
+}
+
 export function rootDir() {
   return path.join(process.cwd(), "docs");
 }

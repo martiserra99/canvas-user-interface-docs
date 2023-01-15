@@ -2,7 +2,7 @@
 name: User Interface
 ---
 
-# User interface
+# User Interface
 
 The UI (user interface) object is the object that holds a reference of the canvas and is the responsible to draw what you define.
 

@@ -2,6 +2,8 @@
 name: Overview
 ---
 
+# Overview
+
 **Canvas User Interface** is a JavaScript library used to build user interfaces using the canvas html element. It aims to manage all the complexities of using the canvas to let you develop anything you want as easy as possible.
 
 The way it works is by providing you a way to build UI elements (ex: image), place them as you want (ex: aligned in the middle) and interact with them to make them do something (ex: move when key pressed).

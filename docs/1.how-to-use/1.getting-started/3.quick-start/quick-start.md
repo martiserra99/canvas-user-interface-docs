@@ -6,7 +6,7 @@ name: Quick Start
 
 To give you an idea about this library I will show you how to create a text that's in the middle of the screen that changes its color when you click it.
 
-You first need to install this library as I have explained in the installation section. Once you have done that you have to include a \<canvas\> in your html file and give it an id, like so:
+You first need to install this library as I have explained in the installation section. Once you have done that you have to include a `<canvas>` in your html file and give it an id, like so:
 
 ```html
 <!DOCTYPE html>

@@ -18,14 +18,14 @@ The first parameter is the type of event and the second parameter is the functio
 
 There are some events that every element can respond to and they are:
 
-- _click_: The mouse button is pressed and released inside the element.
-- _mousedown_: The mouse button is pressed inside the element.
-- _mouseup_: The mouse button is released inside the element.
-- _mouseenter_: The mouse enters the element.
-- _mouseleave_: The mouse leaves the element.
-- _mousemove_: The mouse moves inside the element.
-- _keyup_: A key is pressed.
-- _keydown_: A key is released.
+- `"click"`: The mouse button is pressed and released inside the element.
+- `"mousedown"`: The mouse button is pressed inside the element.
+- `"mouseup"`: The mouse button is released inside the element.
+- `"mouseenter"`: The mouse enters the element.
+- `"mouseleave"`: The mouse leaves the element.
+- `"mousemove"`: The mouse moves inside the element.
+- `"keyup"`: A key is pressed.
+- `"keydown"`: A key is released.
 
 When a mouse event is triggered (click, mouseup...) the data that will be passed in the event listeners will be the coords in which the mouse event happened. The coords will be in this format: `{ x: int, y: int }`.
 

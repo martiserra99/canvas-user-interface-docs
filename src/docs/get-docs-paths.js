@@ -1,8 +1,7 @@
-import { rootDir, slugToDir, dirsInDir, dirToSlug } from "./utils";
+import { docsDir, dirsInDir, dirToSlug } from "./utils";
 
 export default function getDocsPaths(docsSlug) {
-  const docsDir = slugToDir(rootDir(), docsSlug);
-  const sectionDirs = dirsInDir(docsDir);
+  const sectionDirs = dirsInDir(docsDir(docsSlug));
   return sectionDirs.flatMap((sectionDir) => {
     const sectionSlug = dirToSlug(sectionDir);
     const subsectionDirs = dirsInDir(sectionDir);

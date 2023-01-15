@@ -1,14 +1,7 @@
-import {
-  rootDir,
-  slugToDir,
-  dirsInDir,
-  sectionData,
-  subsections,
-} from "./utils";
+import { docsDir, dirsInDir, sectionData, subsections } from "./utils";
 
 export default function getDocsLeft(docsSlug) {
-  const docsDir = slugToDir(rootDir(), docsSlug);
-  const sectionDirs = dirsInDir(docsDir);
+  const sectionDirs = dirsInDir(docsDir(docsSlug));
   return sectionDirs.map((sectionDir) => ({
     ...sectionData(sectionDir),
     subsections: subsections(sectionDir),
