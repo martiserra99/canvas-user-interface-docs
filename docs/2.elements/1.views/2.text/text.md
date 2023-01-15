@@ -1,4 +1,3 @@
 ---
-slug: text
 name: Text
 ---

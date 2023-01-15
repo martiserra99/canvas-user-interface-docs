@@ -1,4 +1,3 @@
 ---
-slug: views
 name: Views
 ---

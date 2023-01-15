@@ -1,4 +1,3 @@
 ---
-slug: element
 name: Element
 ---

@@ -1,4 +1,3 @@
 ---
-slug: properties
 name: Properties
 ---

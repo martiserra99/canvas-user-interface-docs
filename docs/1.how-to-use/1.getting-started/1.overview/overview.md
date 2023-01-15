@@ -1,4 +1,3 @@
 ---
-slug: overview
 name: Overview
 ---

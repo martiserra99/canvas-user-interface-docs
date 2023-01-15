@@ -1,4 +1,3 @@
 ---
-slug: frame
 name: Frame
 ---

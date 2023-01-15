@@ -1,4 +1,3 @@
 ---
-slug: grid
 name: Grid
 ---

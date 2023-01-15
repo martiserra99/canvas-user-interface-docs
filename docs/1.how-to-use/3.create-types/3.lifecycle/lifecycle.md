@@ -1,4 +1,3 @@
 ---
-slug: lifecycle
 name: Lifecycle
 ---

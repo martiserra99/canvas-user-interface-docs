@@ -1,4 +1,3 @@
 ---
-slug: relative
 name: Relative
 ---

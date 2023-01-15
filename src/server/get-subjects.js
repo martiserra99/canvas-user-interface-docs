@@ -14,10 +14,10 @@ export default function getSubjects(docsDirName) {
 
 function getData(parentDir, dirName) {
   const dir = path.join(parentDir, dirName);
-  const fileName = dirName.split(".")[1] + ".md";
-  const file = path.join(dir, fileName);
+  const slug = dirName.split(".")[1];
+  const file = path.join(dir, `${slug}.md`);
   const content = fs.readFileSync(file, "utf-8");
-  return matter(content).data;
+  return { slug, name: matter(content).data.name };
 }
 
 function getPages(docsDir, subjectDirName) {

@@ -1,4 +1,3 @@
 ---
-slug: installation
 name: Installation
 ---

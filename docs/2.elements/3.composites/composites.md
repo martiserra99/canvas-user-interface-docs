@@ -1,4 +1,3 @@
 ---
-slug: composites
 name: Composites
 ---

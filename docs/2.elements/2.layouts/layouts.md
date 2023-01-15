@@ -1,4 +1,3 @@
 ---
-slug: layouts
 name: Layouts
 ---
