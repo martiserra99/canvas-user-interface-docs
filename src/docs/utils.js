@@ -13,12 +13,24 @@ export function slugToDir(dir, slug) {
   return path.join(dir, dirName);
 }
 
-export function dirToSlug(dir) {
-  return path.basename(dir).split(".")[1];
-}
-
 export function dirsInDir(dir) {
   return dirNamesInDir(dir).map((dirName) => path.join(dir, dirName));
+}
+
+export function sectionData(sectionDir) {
+  const sectionSlug = dirToSlug(sectionDir);
+  const sectionFile = fileInDir(sectionDir, `${sectionSlug}.md`);
+  const sectionName = markdown(sectionFile).data.name;
+  return { slug: sectionSlug, name: sectionName };
+}
+
+export function subsections(sectionDir) {
+  const subsectionDirs = dirsInDir(sectionDir);
+  return subsectionDirs.map((subsectionDir) => sectionData(subsectionDir));
+}
+
+export function dirToSlug(dir) {
+  return path.basename(dir).split(".")[1];
 }
 
 export function fileInDir(dir, fileName) {
