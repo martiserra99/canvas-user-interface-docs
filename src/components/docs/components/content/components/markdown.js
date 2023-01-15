@@ -4,9 +4,9 @@ import ReactMarkdown from "react-markdown";
 
 import Code from "src/components/code";
 
-export default function Markdown({ id, content }) {
+export default function Markdown({ id, className, content }) {
   return (
-    <div id={id}>
+    <div id={id} className={className}>
       <ReactMarkdown
         components={{
           h1({ children }) {
