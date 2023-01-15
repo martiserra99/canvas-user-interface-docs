@@ -1,6 +1,9 @@
 @use "styles/variables" as *;
 
 .left {
+  position: fixed;
+  top: $header-height;
+  left: 0;
   height: calc(100vh - $header-height);
   border-right: 0.1rem solid $color-divider;
   padding-left: $margin;
