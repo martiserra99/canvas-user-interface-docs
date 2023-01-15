@@ -1,5 +1,5 @@
 ---
-name: Quick Start
+nav: Quick Start
 ---
 
 # Quick Start

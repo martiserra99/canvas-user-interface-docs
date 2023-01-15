@@ -1,5 +1,5 @@
 ---
-name: background
+nav: background
 ---
 
 ### background

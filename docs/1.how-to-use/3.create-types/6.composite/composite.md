@@ -1,5 +1,5 @@
 ---
-name: Composite
+nav: Composite
 ---
 
 # Composite

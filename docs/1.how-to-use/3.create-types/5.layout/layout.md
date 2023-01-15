@@ -1,5 +1,5 @@
 ---
-name: Layout
+nav: Layout
 ---
 
 # Layout

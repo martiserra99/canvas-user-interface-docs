@@ -1,5 +1,5 @@
 ---
-name: align
+nav: align
 ---
 
 ### align

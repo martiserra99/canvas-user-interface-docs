@@ -1,5 +1,5 @@
 ---
-name: imageSize
+nav: imageSize
 ---
 
 ### imageSize

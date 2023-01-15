@@ -1,5 +1,5 @@
 ---
-name: src
+nav: src
 ---
 
 ### src

@@ -1,5 +1,5 @@
 ---
-name: position
+nav: position
 ---
 
 ### position

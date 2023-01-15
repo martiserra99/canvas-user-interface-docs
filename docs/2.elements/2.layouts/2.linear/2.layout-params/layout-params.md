@@ -1,5 +1,5 @@
 ---
-name: Layout Params
+nav: Layout Params
 ---
 
 ## Layout Params

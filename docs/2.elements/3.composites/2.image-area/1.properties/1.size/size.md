@@ -1,5 +1,5 @@
 ---
-name: size
+nav: size
 ---
 
 ### size

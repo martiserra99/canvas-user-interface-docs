@@ -1,5 +1,5 @@
 ---
-name: Lifecycle
+nav: Lifecycle
 ---
 
 ## Lifecycle

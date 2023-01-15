@@ -1,5 +1,5 @@
 ---
-name: Image Area
+nav: Image Area
 ---
 
 # Image Area (imageArea)

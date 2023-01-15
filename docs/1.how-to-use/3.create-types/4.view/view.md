@@ -1,5 +1,5 @@
 ---
-name: View
+nav: View
 ---
 
 # View

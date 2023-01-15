@@ -1,5 +1,5 @@
 ---
-name: Linear
+nav: Linear
 ---
 
 # Linear (linear)

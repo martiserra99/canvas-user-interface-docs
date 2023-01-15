@@ -14,13 +14,13 @@ export default function Right({ slug, right }) {
             right.map((section) => (
               <li key={section.slug}>
                 <Link href="#" className={styles.link}>
-                  {section.name}
+                  {section.nav}
                 </Link>
                 <ul className={styles.subsections}>
                   {section.subsections.map((subsection) => (
                     <li key={subsection.slug}>
                       <Link href="#" className={styles.link}>
-                        {subsection.name}
+                        {subsection.nav}
                       </Link>
                     </li>
                   ))}

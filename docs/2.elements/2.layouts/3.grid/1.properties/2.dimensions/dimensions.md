@@ -1,5 +1,5 @@
 ---
-name: dimensions
+nav: dimensions
 ---
 
 ### dimensions

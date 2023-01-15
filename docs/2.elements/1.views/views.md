@@ -1,3 +1,3 @@
 ---
-name: Views
+nav: Views
 ---

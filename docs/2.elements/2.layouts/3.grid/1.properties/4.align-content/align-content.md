@@ -1,5 +1,5 @@
 ---
-name: alignContent
+nav: alignContent
 ---
 
 ### alignContent

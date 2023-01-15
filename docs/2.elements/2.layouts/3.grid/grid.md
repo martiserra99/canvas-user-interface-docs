@@ -1,5 +1,5 @@
 ---
-name: Grid
+nav: Grid
 ---
 
 # Grid (grid)

@@ -1,5 +1,5 @@
 ---
-name: margin
+nav: margin
 ---
 
 ### margin

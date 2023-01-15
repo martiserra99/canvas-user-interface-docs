@@ -29,8 +29,8 @@ export function dirsInDir(dir) {
 export function sectionData(sectionDir) {
   const sectionSlug = dirToSlug(sectionDir);
   const sectionFile = fileInDir(sectionDir, `${sectionSlug}.md`);
-  const sectionName = markdown(sectionFile).data.name;
-  return { slug: sectionSlug, name: sectionName };
+  const sectionNav = markdown(sectionFile).data.nav;
+  return { slug: sectionSlug, nav: sectionNav };
 }
 
 export function subsections(sectionDir) {

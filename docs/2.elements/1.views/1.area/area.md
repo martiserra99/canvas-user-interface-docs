@@ -1,5 +1,5 @@
 ---
-name: Area
+nav: Area
 ---
 
 # Area (area)

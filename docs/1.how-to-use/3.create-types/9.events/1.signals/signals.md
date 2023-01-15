@@ -1,5 +1,5 @@
 ---
-name: Signals
+nav: Signals
 ---
 
 ## Signals

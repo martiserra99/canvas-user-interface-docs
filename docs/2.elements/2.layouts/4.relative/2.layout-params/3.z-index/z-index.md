@@ -1,5 +1,5 @@
 ---
-name: zIndex
+nav: zIndex
 ---
 
 ### zIndex

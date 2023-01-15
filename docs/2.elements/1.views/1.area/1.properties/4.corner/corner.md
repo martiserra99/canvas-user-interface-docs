@@ -1,5 +1,5 @@
 ---
-name: corner
+nav: corner
 ---
 
 ### corner

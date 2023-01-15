@@ -1,5 +1,5 @@
 ---
-name: Events
+nav: Events
 ---
 
 # Events

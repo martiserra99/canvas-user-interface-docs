@@ -1,5 +1,5 @@
 ---
-name: Properties
+nav: Properties
 ---
 
 # Properties

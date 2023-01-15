@@ -1,5 +1,5 @@
 ---
-name: border
+nav: border
 ---
 
 ### border

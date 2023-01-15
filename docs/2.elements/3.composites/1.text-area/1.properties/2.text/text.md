@@ -1,5 +1,5 @@
 ---
-name: text
+nav: text
 ---
 
 ### text

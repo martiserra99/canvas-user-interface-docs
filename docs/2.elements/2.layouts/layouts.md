@@ -1,3 +1,3 @@
 ---
-name: Layouts
+nav: Layouts
 ---

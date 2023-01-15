@@ -1,5 +1,5 @@
 ---
-name: direction
+nav: direction
 ---
 
 ### direction

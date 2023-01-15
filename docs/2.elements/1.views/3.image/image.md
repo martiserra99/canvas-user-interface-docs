@@ -1,5 +1,5 @@
 ---
-name: Image
+nav: Image
 ---
 
 # Image (image)

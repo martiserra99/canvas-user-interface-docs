@@ -1,5 +1,5 @@
 ---
-name: color
+nav: color
 ---
 
 ### color

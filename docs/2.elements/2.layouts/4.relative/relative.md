@@ -1,5 +1,5 @@
 ---
-name: Relative
+nav: Relative
 ---
 
 # Relative (relative)

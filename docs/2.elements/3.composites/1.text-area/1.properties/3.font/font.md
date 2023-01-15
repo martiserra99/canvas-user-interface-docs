@@ -1,5 +1,5 @@
 ---
-name: font
+nav: font
 ---
 
 ### font

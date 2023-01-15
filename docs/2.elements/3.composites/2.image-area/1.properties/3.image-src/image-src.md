@@ -1,5 +1,5 @@
 ---
-name: imageSrc
+nav: imageSrc
 ---
 
 ### imageSrc

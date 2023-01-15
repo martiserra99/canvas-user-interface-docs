@@ -11,7 +11,7 @@ export default function Left({ slug, left }) {
         <ul className={styles.sections}>
           {left.map((section) => (
             <li key={section.slug}>
-              <h3 className={styles.heading}>{section.name}</h3>
+              <h3 className={styles.heading}>{section.nav}</h3>
               <ul className={styles.subsections}>
                 {section.subsections.map((subsection) => (
                   <li key={subsection.slug}>
@@ -23,7 +23,7 @@ export default function Left({ slug, left }) {
                         subsection.slug
                       )}
                     >
-                      {subsection.name}
+                      {subsection.nav}
                     </Link>
                   </li>
                 ))}

@@ -1,5 +1,5 @@
 ---
-name: Frame
+nav: Frame
 ---
 
 # Frame (frame)

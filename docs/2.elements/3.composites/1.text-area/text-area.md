@@ -1,5 +1,5 @@
 ---
-name: Text Area
+nav: Text Area
 ---
 
 # Text Area (textArea)

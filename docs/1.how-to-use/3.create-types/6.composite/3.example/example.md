@@ -1,5 +1,5 @@
 ---
-name: Example
+nav: Example
 ---
 
 ## Example

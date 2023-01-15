@@ -1,5 +1,5 @@
 ---
-name: Functions
+nav: Functions
 ---
 
 # Functions

@@ -1,5 +1,5 @@
 ---
-name: bias
+nav: bias
 ---
 
 ### bias

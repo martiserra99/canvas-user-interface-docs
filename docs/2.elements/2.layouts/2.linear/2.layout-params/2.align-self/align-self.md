@@ -1,5 +1,5 @@
 ---
-name: alignSelf
+nav: alignSelf
 ---
 
 ### alignSelf

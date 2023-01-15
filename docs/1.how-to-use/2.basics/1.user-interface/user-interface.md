@@ -1,5 +1,5 @@
 ---
-name: User Interface
+nav: User Interface
 ---
 
 # User Interface

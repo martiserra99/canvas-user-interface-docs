@@ -1,5 +1,5 @@
 ---
-name: Element
+nav: Element
 ---
 
 # Element

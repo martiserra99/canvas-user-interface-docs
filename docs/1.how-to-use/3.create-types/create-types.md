@@ -1,3 +1,3 @@
 ---
-name: Create Types
+nav: Create Types
 ---

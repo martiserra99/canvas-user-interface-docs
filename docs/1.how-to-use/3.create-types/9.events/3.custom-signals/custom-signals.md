@@ -1,5 +1,5 @@
 ---
-name: Custom Signals
+nav: Custom Signals
 ---
 
 ## Custom signals

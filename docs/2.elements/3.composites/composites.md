@@ -1,3 +1,3 @@
 ---
-name: Composites
+nav: Composites
 ---

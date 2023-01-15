@@ -1,5 +1,5 @@
 ---
-name: Overview
+nav: Overview
 ---
 
 # Overview

@@ -1,5 +1,5 @@
 ---
-name: span
+nav: span
 ---
 
 ### span
