@@ -7,29 +7,31 @@ export default function Left({ slug, left }) {
   const router = useRouter();
   return (
     <nav className={styles.left}>
-      <ul className={styles.sections}>
-        {left.map((section) => (
-          <li key={section.slug}>
-            <h3 className={styles.heading}>{section.name}</h3>
-            <ul className={styles.subsections}>
-              {section.subsections.map((subsection) => (
-                <li key={subsection.slug}>
-                  <Link
-                    href={`/${slug}/${section.slug}/${subsection.slug}`}
-                    className={linkClassName(
-                      router,
-                      section.slug,
-                      subsection.slug
-                    )}
-                  >
-                    {subsection.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.content}>
+        <ul className={styles.sections}>
+          {left.map((section) => (
+            <li key={section.slug}>
+              <h3 className={styles.heading}>{section.name}</h3>
+              <ul className={styles.subsections}>
+                {section.subsections.map((subsection) => (
+                  <li key={subsection.slug}>
+                    <Link
+                      href={`/${slug}/${section.slug}/${subsection.slug}`}
+                      className={linkClassName(
+                        router,
+                        section.slug,
+                        subsection.slug
+                      )}
+                    >
+                      {subsection.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }

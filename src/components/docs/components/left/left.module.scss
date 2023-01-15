@@ -1,21 +1,30 @@
 @use "styles/variables" as *;
 
 .left {
+  height: calc(100vh - $header-height);
+  width: calc(#{$margin} + 27rem);
+  flex-shrink: 0;
+
+  @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
+    width: calc((100% - #{$max-width}) / 2 + 27rem);
+  }
+}
+
+.content {
   position: fixed;
   top: $header-height;
   left: 0;
   height: calc(100vh - $header-height);
+  width: calc(#{$margin} + 27rem);
   border-right: 0.1rem solid $color-divider;
   padding-left: $margin;
-  width: calc(#{$margin} + 27rem);
-  flex-shrink: 0;
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
   overflow: auto;
 
   @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
-    padding-left: calc((100% - #{$max-width}) / 2);
     width: calc((100% - #{$max-width}) / 2 + 27rem);
+    padding-left: calc((100% - #{$max-width}) / 2);
   }
 }
 
