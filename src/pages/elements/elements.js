@@ -1,3 +1,4 @@
+import getDocsPaths from "src/docs/get-docs-paths";
 import getDocsLeft from "src/docs/get-docs-left";
 
 import Docs from "src/components/docs/docs";
@@ -7,14 +8,7 @@ export default function Elements({ left }) {
 }
 
 export function getStaticPaths() {
-  return {
-    paths: getDocsLeft("elements").flatMap((section) =>
-      section.subsections.map((subsection) => ({
-        params: { section: section.slug, subsection: subsection.slug },
-      }))
-    ),
-    fallback: false,
-  };
+  return { paths: getDocsPaths("elements"), fallback: false };
 }
 
 export function getStaticProps() {

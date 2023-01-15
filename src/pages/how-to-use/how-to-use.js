@@ -1,6 +1,4 @@
-import path from "path";
-import fs from "fs";
-
+import getDocsPaths from "src/docs/get-docs-paths";
 import getDocsLeft from "src/docs/get-docs-left";
 
 import Docs from "src/components/docs/docs";
@@ -10,15 +8,7 @@ export default function HowToUse({ left }) {
 }
 
 export function getStaticPaths() {
-  return {
-    paths: [{ params: { section: "getting-started", subsection: "overview" } }],
-    // paths: getDocsLeft("how-to-use").flatMap((section) =>
-    //   section.subsections.map((subsection) => ({
-    //     params: { section: section.slug, subsection: subsection.slug },
-    //   }))
-    // ),
-    fallback: false,
-  };
+  return { paths: getDocsPaths("how-to-use"), fallback: false };
 }
 
 export function getStaticProps() {
