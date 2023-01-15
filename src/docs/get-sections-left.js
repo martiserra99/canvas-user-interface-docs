@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-export default function getLeft(dirName) {
+export default function getSectionsLeft(dirName) {
   const dir = path.join(process.cwd(), "docs", dirName);
   const sectionsDirNames = getDirNames(dir);
   return sectionsDirNames.map((sectionDirName) => {

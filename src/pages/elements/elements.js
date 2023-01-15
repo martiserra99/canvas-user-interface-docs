@@ -1,4 +1,4 @@
-import getLeft from "src/docs/get-left";
+import getSectionsLeft from "src/docs/get-sections-left";
 
 import Docs from "src/components/docs/docs";
 
@@ -14,5 +14,5 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps() {
-  return { props: { sections: getLeft("2.elements") } };
+  return { props: { sections: getSectionsLeft("2.elements") } };
 }
