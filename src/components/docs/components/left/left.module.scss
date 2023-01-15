@@ -46,7 +46,11 @@
   line-height: 1.95rem;
   transition: all 0.2s ease;
 
-  &:hover {
+  &.selected {
+    color: $color-accent;
+  }
+
+  &:not(.selected):hover {
     color: $color-primary;
   }
 }

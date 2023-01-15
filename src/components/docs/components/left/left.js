@@ -1,8 +1,10 @@
 import styles from "./left.module.scss";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Left({ sections }) {
+  const router = useRouter();
   return (
     <nav className={styles.left}>
       <ul className={styles.sections}>
@@ -14,7 +16,11 @@ export default function Left({ sections }) {
                 <li key={subsection.slug}>
                   <Link
                     href={`/how-to-use/${subsection.slug}`}
-                    className={styles.link}
+                    className={linkClassName(
+                      router,
+                      section.slug,
+                      subsection.slug
+                    )}
                   >
                     {subsection.name}
                   </Link>
@@ -26,4 +32,14 @@ export default function Left({ sections }) {
       </ul>
     </nav>
   );
+}
+
+function linkClassName(router, section, subsection) {
+  let className = styles.link;
+  if (
+    router.query.section === section &&
+    router.query.subsection === subsection
+  )
+    className += ` ${styles.selected}`;
+  return className;
 }
