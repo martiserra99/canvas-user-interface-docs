@@ -36,7 +36,8 @@
   padding-left: 1.3rem;
 }
 
-.link {
+.link,
+.empty {
   display: inline-block;
   font-size: 1.3rem;
   color: $color-secondary;
@@ -45,8 +46,8 @@
   padding: 0.4rem 0;
   line-height: 1.95rem;
   transition: all 0.2s ease;
+}
 
-  &:hover {
-    color: $color-primary;
-  }
+.link:hover {
+  color: $color-primary;
 }
