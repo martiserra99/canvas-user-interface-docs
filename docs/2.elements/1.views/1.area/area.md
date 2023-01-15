@@ -1,8 +1,7 @@
 ---
 nav: Area
+title: Area (area)
 ---
-
-# Area (area)
 
 It is a rectangular area. You can define its size, its corners...
 

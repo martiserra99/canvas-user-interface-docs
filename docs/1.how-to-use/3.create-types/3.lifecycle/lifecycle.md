@@ -1,8 +1,7 @@
 ---
 nav: Lifecycle
+title: Lifecycle
 ---
-
-# Lifecycle
 
 Every element has a lifecycle in which goes through different states. The states that the element goes through are:
 

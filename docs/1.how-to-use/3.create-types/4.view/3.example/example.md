@@ -1,8 +1,7 @@
 ---
 nav: Example
+title: Example
 ---
-
-## Example
 
 To give you a solid understanding about how to create a view type I will show you how to create a type that consists of a ball.
 

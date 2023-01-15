@@ -4,20 +4,12 @@ import ReactMarkdown from "react-markdown";
 
 import Code from "src/components/code";
 
-export default function Markdown({ id, className, content }) {
+export default function Markdown({ id, className, title, content }) {
   return (
     <div id={id} className={className}>
+      <Title {...title} />
       <ReactMarkdown
         components={{
-          h1({ children }) {
-            return <h1 className={styles.h1}>{children}</h1>;
-          },
-          h2({ children }) {
-            return <h2 className={styles.h2}>{children}</h2>;
-          },
-          h3({ children }) {
-            return <h3 className={styles.h3}>{children}</h3>;
-          },
           p({ children }) {
             return <p className={styles.p}>{children}</p>;
           },
@@ -42,4 +34,10 @@ export default function Markdown({ id, className, content }) {
       </ReactMarkdown>
     </div>
   );
+}
+
+function Title({ type, text }) {
+  if (type === "h1") return <h1 className={styles.h1}>{text}</h1>;
+  if (type === "h2") return <h2 className={styles.h2}>{text}</h2>;
+  return <h3 className={styles.h3}>{text}</h3>;
 }

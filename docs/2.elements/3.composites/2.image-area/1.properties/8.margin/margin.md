@@ -1,8 +1,7 @@
 ---
 nav: margin
+title: margin
 ---
-
-### margin
 
 It is the margin of the image in its area. It is an object with the properties `top`, `right`, `bottom` and `left` and each of them contains a number.
 

@@ -1,8 +1,7 @@
 ---
 nav: alignSelf
+title: alignSelf
 ---
-
-### alignSelf
 
 It defines the alignment of the child in the opposite direction of the `direction` property of the layout. It is used to override the value of the `alignItems` property of the layout.
 

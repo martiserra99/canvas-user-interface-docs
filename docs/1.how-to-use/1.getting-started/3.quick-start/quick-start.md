@@ -1,8 +1,7 @@
 ---
 nav: Quick Start
+title: Quick Start
 ---
-
-# Quick Start
 
 To give you an idea about this library I will show you how to create a text that's in the middle of the screen that changes its color when you click it.
 

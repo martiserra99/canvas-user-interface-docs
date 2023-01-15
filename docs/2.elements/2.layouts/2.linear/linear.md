@@ -1,8 +1,7 @@
 ---
 nav: Linear
+title: Linear (linear)
 ---
-
-# Linear (linear)
 
 It is a layout that lets you place the children linearly one next to the other one horizontally and vertically.
 

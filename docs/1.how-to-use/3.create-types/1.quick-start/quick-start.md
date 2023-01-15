@@ -1,8 +1,7 @@
 ---
 nav: Quick Start
+title: Quick Start
 ---
-
-# Quick Start
 
 You can create your types of views, layouts and composites. To give you an idea about how to do that I will show you how to create a view type that consists of a rectangle.
 

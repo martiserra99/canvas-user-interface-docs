@@ -1,8 +1,7 @@
 ---
 nav: align
+title: align
 ---
-
-### align
 
 This property is useful when the text doesn't fit in its parent. It defines how the text has to be aligned. It is an object with the properties `vertical` and `horizontal`.
 

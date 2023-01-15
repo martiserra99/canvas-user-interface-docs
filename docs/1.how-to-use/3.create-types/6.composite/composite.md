@@ -1,8 +1,7 @@
 ---
 nav: Composite
+title: Composite
 ---
-
-# Composite
 
 The composite is an element that it is composed of several elements and behaves like a single one. It is used like a view but its inner workings are completely different. There are different types of composites and each one of them defines what are the elements it is composed of.
 

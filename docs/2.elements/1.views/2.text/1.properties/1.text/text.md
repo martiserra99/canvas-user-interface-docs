@@ -1,8 +1,7 @@
 ---
 nav: text
+title: text
 ---
-
-### text
 
 It is the text that has to draw.
 

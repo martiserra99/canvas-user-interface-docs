@@ -1,8 +1,7 @@
 ---
 nav: alignContent
+title: alignContent
 ---
-
-### alignContent
 
 In case that the size of the content (the rows and columns) is less than the size of the layout you can use this property to define how the content is aligned in the layout.
 

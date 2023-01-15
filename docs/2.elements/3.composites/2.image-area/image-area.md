@@ -1,8 +1,7 @@
 ---
 nav: Image Area
+title: Image Area (imageArea)
 ---
-
-# Image Area (imageArea)
 
 It is an area in which there is an image inside. You can define the background color, the image, the size of the area...
 

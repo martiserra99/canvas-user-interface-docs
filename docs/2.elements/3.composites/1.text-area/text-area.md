@@ -1,8 +1,7 @@
 ---
 nav: Text Area
+title: Text Area (textArea)
 ---
-
-# Text Area (textArea)
 
 It is an area in which there is a text inside. You can define the background color, the text, the size of the area...
 

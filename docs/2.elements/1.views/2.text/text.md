@@ -1,8 +1,7 @@
 ---
 nav: Text
+title: Text (text)
 ---
-
-# Text (text)
 
 It is text. You can define its color, its size, its font...
 

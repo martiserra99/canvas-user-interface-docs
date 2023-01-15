@@ -1,8 +1,7 @@
 ---
 nav: background
+title: background
 ---
-
-### background
 
 It is the background color of the composite.
 

@@ -1,8 +1,7 @@
 ---
 nav: Functions
+title: Functions
 ---
-
-# Functions
 
 You can define functions for the type of view, layout or composite you create. You can do that by using the `.fun(name, func)` method, like so:
 

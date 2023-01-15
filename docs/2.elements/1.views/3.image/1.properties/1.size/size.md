@@ -1,8 +1,7 @@
 ---
 nav: size
+title: size
 ---
-
-### size
 
 It is the size of the image. It is an object with the properties `width` and `height` and each of them has to contain a number.
 

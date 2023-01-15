@@ -1,8 +1,7 @@
 ---
 nav: color
+title: color
 ---
-
-### color
 
 It is the color of the text.
 

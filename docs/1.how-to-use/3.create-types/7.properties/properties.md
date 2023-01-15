@@ -1,8 +1,7 @@
 ---
 nav: Properties
+title: Properties
 ---
-
-# Properties
 
 When creating a type of view, layout or composite you can define the properties that it will have using the `.set(property, value)` method, like so:
 

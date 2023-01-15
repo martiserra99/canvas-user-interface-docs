@@ -1,8 +1,7 @@
 ---
 nav: User Interface
+title: User Interface
 ---
-
-# User Interface
 
 To understand how to create types of views, layouts and composites you first need to understand how the user interface draws everything on the canvas.
 

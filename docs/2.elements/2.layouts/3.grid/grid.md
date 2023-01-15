@@ -1,8 +1,7 @@
 ---
 nav: Grid
+title: Grid (grid)
 ---
-
-# Grid (grid)
 
 It is a layout that lets you create a grid with rows and columns and place its children in its cells.
 

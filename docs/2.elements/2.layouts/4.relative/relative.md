@@ -1,8 +1,7 @@
 ---
 nav: Relative
+title: Relative (relative)
 ---
-
-# Relative (relative)
 
 It is a layout that lets you place the children relative to each other.
 

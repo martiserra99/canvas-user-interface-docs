@@ -8,7 +8,8 @@ export default function getDocsContent(docsSlug, sectionSlug, subsectionSlug) {
 function sectionContent(dir) {
   const slug = dirToSlug(dir);
   const file = fileInDir(dir, `${slug}.md`);
-  return { slug, content: markdown(file).content };
+  const md = markdown(file);
+  return { slug, title: md.data.title, content: md.content };
 }
 
 function sections(dir) {

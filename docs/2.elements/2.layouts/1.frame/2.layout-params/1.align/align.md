@@ -1,8 +1,7 @@
 ---
 nav: align
+title: align
 ---
-
-### align
 
 It defines the alignment of the element. It is an object with the properties `horizontal` and `vertical`.
 

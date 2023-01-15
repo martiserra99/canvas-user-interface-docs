@@ -1,8 +1,7 @@
 ---
 nav: attachTo
+title: attachTo
 ---
-
-### attachTo
 
 It defines where the child is attached to. It is an object with the properties `top`, `right`, `bottom` and `left`.
 

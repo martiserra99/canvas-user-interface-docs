@@ -1,5 +1,4 @@
 ---
 nav: Layout Params
+title: Layout Params
 ---
-
-## Layout Params

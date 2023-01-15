@@ -1,8 +1,7 @@
 ---
 nav: Functions
+title: Functions
 ---
-
-# Functions
 
 Every element may have some functions that you can call to perform an action or get a result. To call some function you have to use the `.call(name, ...params)` method, like so:
 

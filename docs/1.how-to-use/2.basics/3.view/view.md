@@ -1,8 +1,7 @@
 ---
 nav: View
+title: View
 ---
-
-# View
 
 The view is a graphic that is displayed on the UI. There are different types of views and each one of them is drawn in a different way (ex: image and text).
 

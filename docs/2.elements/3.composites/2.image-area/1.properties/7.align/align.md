@@ -1,8 +1,7 @@
 ---
 nav: align
+title: align
 ---
-
-### align
 
 It is used to align the image inside the area. It is an object with the properties `horizontal` and `vertical`.
 

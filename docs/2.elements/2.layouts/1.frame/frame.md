@@ -1,8 +1,7 @@
 ---
 nav: Frame
+title: Frame (frame)
 ---
-
-# Frame (frame)
 
 It is a layout that lets you place the children aligned vertically and horizontally in different ways.
 

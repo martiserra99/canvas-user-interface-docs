@@ -1,8 +1,7 @@
 ---
 nav: Installation
+title: Installation
 ---
-
-# Installation
 
 To start using this library you have to download it from the home page. You have to include the downloaded file in your project and you have to import the `canvasUI` object, like so:
 

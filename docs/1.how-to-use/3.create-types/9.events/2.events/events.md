@@ -1,8 +1,7 @@
 ---
 nav: Events
+title: Events
 ---
-
-## Events
 
 Now that you understand everything about signals you are ready to understand how to create events.
 

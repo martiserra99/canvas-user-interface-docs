@@ -1,8 +1,7 @@
 ---
 nav: font
+title: font
 ---
-
-### font
 
 It is the font of the text. It is an object that has the properties `family`, `size` and `weight`.
 

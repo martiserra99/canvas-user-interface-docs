@@ -1,8 +1,7 @@
 ---
 nav: gap
+title: gap
 ---
-
-### gap
 
 It defines the gap between the rows and columns. It has the properties `size` and `color`.
 

@@ -1,8 +1,7 @@
 ---
 nav: alignItems
+title: alignItems
 ---
-
-### alignItems
 
 It defines how the children are aligned inside the cells.
 

@@ -1,8 +1,7 @@
 ---
 nav: Image
+title: Image (image)
 ---
-
-# Image (image)
 
 It is an image. You can define its size and the image that has to draw.
 

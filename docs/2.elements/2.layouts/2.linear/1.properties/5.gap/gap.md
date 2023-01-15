@@ -1,8 +1,7 @@
 ---
 nav: gap
+title: gap
 ---
-
-### gap
 
 It is the gap between the children. This value has to be a number.
 

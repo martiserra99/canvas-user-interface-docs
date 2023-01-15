@@ -1,8 +1,7 @@
 ---
 nav: Element
+title: Element
 ---
-
-# Element
 
 Elements are the basic building blocks for creating user interfaces. Each element of the UI is placed on some coords, has some size (width and height) and is drawn in a specific way. We can classify them in three classes:
 

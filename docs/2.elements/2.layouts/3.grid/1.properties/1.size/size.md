@@ -1,8 +1,7 @@
 ---
 nav: size
+title: size
 ---
-
-### size
 
 It is the size of the layout. It is an object with the properties `width` and `height`.
 

@@ -1,8 +1,7 @@
 ---
 nav: Layout
+title: Layout
 ---
-
-# Layout
 
 The layout is a container of elements that define how the elements it contains are placed. There are different types of layouts and each one of them places its elements in different ways (ex: by rows and columns). The elements that the layout contains are called children.
 

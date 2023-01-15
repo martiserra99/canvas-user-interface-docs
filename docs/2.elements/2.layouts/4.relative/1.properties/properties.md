@@ -1,5 +1,4 @@
 ---
 nav: Properties
+title: Properties
 ---
-
-## Properties

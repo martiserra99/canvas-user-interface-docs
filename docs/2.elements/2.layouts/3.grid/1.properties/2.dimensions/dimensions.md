@@ -1,8 +1,7 @@
 ---
 nav: dimensions
+title: dimensions
 ---
-
-### dimensions
 
 It defines the number of rows and columns as well as their sizes. It is an object that has the properties `columns` and `rows`.
 

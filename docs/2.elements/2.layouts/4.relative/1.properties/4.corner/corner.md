@@ -1,8 +1,7 @@
 ---
 nav: corner
+title: corner
 ---
-
-### corner
 
 It defines how the corners are drawn. It is an object with the properties `type` and `size`.
 

@@ -1,8 +1,7 @@
 ---
 nav: Example
+title: Example
 ---
-
-## Example
 
 To give you a solid understanding about how to create a composite type I will show you how to create a type that consists of a grid of numbers (2x2). This grid will be composed of a grid layout with a text view in each cell.
 

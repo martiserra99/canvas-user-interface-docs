@@ -1,8 +1,7 @@
 ---
 nav: Custom Signals
+title: Custom Signals
 ---
-
-## Custom signals
 
 You can use the `.signal(signal)` method to create your custom signals and create events that are triggered when this signal takes place. This techinque is very useful when creating events for the composite types, like so:
 

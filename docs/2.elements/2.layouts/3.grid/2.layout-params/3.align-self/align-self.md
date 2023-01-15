@@ -1,8 +1,7 @@
 ---
 nav: alignSelf
+title: alignSelf
 ---
-
-### alignSelf
 
 It defines how the element is aligned inside the cell. It is used to override its alignment defined in the `alignItems` property of the layout.
 

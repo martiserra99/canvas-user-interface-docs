@@ -8,6 +8,7 @@ export default function Content({ content }) {
     <div className={styles.content}>
       <Markdown
         id={content.slug}
+        title={{ type: "h1", text: content.title }}
         content={content.content}
         className={styles.docs}
       />
@@ -15,6 +16,7 @@ export default function Content({ content }) {
         <Fragment key={section.slug}>
           <Markdown
             id={section.slug}
+            title={{ type: "h2", text: section.title }}
             content={section.content}
             className={styles.section}
           />
@@ -22,6 +24,7 @@ export default function Content({ content }) {
             <Markdown
               key={subsection.slug}
               id={subsection.slug}
+              title={{ type: "h3", text: subsection.title }}
               content={subsection.content}
               className={styles.subsection}
             />

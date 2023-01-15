@@ -1,8 +1,7 @@
 ---
 nav: Lifecycle
+title: Lifecycle
 ---
-
-## Lifecycle
 
 The layout element goes through different lifecycle states and it performs different tasks in each one of them:
 

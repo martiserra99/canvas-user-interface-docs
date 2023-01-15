@@ -1,8 +1,7 @@
 ---
 nav: Events
+title: Events
 ---
-
-# Events
 
 Every element can respond to some events and execute what we call event listeners. Event listeners are functions that are called when a specific event happens (ex: click).
 
