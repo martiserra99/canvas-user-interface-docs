@@ -3,10 +3,10 @@ import Content from "./components/content/content";
 import Left from "./components/left/left";
 import Right from "./components/right/right";
 
-export default function Docs({ slug, sections }) {
+export default function Docs({ slug, left }) {
   return (
     <Container>
-      <Left slug={slug} sections={sections} />
+      <Left slug={slug} left={left} />
       <Content />
       <Right />
     </Container>
