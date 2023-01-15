@@ -1,9 +1,9 @@
-import getSubjects from "src/server/get-subjects";
+import getLeft from "src/docs/get-left";
 
 import Docs from "src/components/docs/docs";
 
-export default function Elements({ subjects }) {
-  return <Docs subjects={subjects} />;
+export default function Elements({ sections }) {
+  return <Docs sections={sections} />;
 }
 
 export function getStaticPaths() {
@@ -14,5 +14,5 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps() {
-  return { props: { subjects: getSubjects("2.elements") } };
+  return { props: { sections: getLeft("2.elements") } };
 }
