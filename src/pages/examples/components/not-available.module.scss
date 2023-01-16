@@ -1,0 +1,21 @@
+@use "styles/variables" as *;
+
+.content {
+  height: calc(100vh - $header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $header-height;
+  padding-left: $margin-mobile;
+  padding-right: $margin-mobile;
+}
+
+.text {
+  font-size: 1.6rem;
+  color: $color-secondary;
+  text-align: center;
+
+  @media (min-width: 43.75em /* 700px */) and (min-height: 43.75em /* 700px */) {
+    display: none;
+  }
+}

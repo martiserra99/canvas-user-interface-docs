@@ -3,6 +3,7 @@ import { useState } from "react"
 import Content from "./components/content"
 import Arrow from "./components/arrow"
 import Example from "./components/example"
+import NotAvailable from "./components/not-available"
 
 const examples = [
   "https://martiserra99.github.io/puzzle/",
@@ -25,10 +26,13 @@ export default function Examples() {
     })
   }
   return (
-    <Content>
-      <Arrow direction="left" onClick={handleLeft} />
-      <Example src={examples[position]} />
-      <Arrow direction="right" onClick={handleRight} />
-    </Content>
+    <>
+      <Content>
+        <Arrow direction="left" onClick={handleLeft} />
+        <Example src={examples[position]} />
+        <Arrow direction="right" onClick={handleRight} />
+      </Content>
+      <NotAvailable />
+    </>
   )
 }
