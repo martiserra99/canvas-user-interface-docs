@@ -1,11 +1,26 @@
 import styles from "./right.module.scss"
 
 import Link from "next/link"
-import { useRef } from "react"
+import { useEffect, useState, useCallback } from "react"
 
 export default function Right({ slug, right }) {
-  const links = useRef([])
-  const addLink = (link) => links.current.push(link)
+  const [active, setActive] = useState(null)
+  const [links, setLinks] = useState([])
+  const addLink = useCallback((link) => {
+    setLinks((currLinks) => [link, ...currLinks])
+  }, [])
+
+  useEffect(() => {
+    const listener = () => {
+      for (const link of links)
+        if (window.scrollY + 1 >= getLinkTop(link))
+          return setActive(link.dataset.id)
+      setActive(null)
+    }
+    listener()
+    window.addEventListener("scroll", listener)
+    return () => window.removeEventListener("scroll", listener)
+  }, [links])
 
   function handleLinkClick(e) {
     e.preventDefault()
@@ -24,10 +39,11 @@ export default function Right({ slug, right }) {
             right.map((section) => (
               <li key={section.slug}>
                 <Link
+                  data-id={section.slug}
                   ref={addLink}
                   href={`#${section.slug}`}
-                  className={styles.link}
                   onClick={handleLinkClick}
+                  className={linkClassName(section.slug === active)}
                 >
                   {section.nav}
                 </Link>
@@ -35,10 +51,13 @@ export default function Right({ slug, right }) {
                   {section.subsections.map((subsection) => (
                     <li key={subsection.slug}>
                       <Link
+                        data-id={`${section.slug}/${subsection.slug}`}
                         ref={addLink}
                         href={`#${section.slug}/${subsection.slug}`}
-                        className={styles.link}
                         onClick={handleLinkClick}
+                        className={linkClassName(
+                          `${section.slug}/${subsection.slug}` === active
+                        )}
                       >
                         {subsection.nav}
                       </Link>
@@ -52,6 +71,12 @@ export default function Right({ slug, right }) {
       </div>
     </div>
   )
+}
+
+function linkClassName(active) {
+  let className = styles.link
+  if (active) className += ` ${styles.active}`
+  return className
 }
 
 function getLinkTop(link) {
