@@ -3,6 +3,8 @@ nav: gap
 title: gap
 ---
 
-It is the gap between the children. This value has to be a number.
+It is the gap between the children. Its default value is:
 
-Its default value is `0`.
+```javascript
+0
+```

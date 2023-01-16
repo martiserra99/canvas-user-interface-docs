@@ -3,6 +3,8 @@ nav: background
 title: background
 ---
 
-It is the background color of the view.
+It is the background color of the view. Its default value is
 
-Its default value is `"rgba(0,0,0,0)"`
+```javascript
+"#000"
+```

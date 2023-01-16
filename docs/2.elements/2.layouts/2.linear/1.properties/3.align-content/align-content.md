@@ -3,6 +3,8 @@ nav: alignContent
 title: alignContent
 ---
 
-It is the alignment of its content (its children) in the direction of the `direction` property. The value can be `"start"`, `"middle"` and `"end"`.
+It is the alignment of its content (its children) in the direction of the `direction` property. It can be `"start"`, `"middle"` and `"end"`. Its default value is:
 
-Its default value is `"middle"`.
+```javascript
+"middle"
+```

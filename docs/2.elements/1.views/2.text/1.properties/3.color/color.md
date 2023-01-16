@@ -3,6 +3,8 @@ nav: color
 title: color
 ---
 
-It is the color of the text.
+It is the color of the text. Its default value is:
 
-Its default value is `"#000"`.
+```javascript
+"#000"
+```

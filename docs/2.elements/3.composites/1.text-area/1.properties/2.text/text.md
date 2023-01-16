@@ -3,6 +3,8 @@ nav: text
 title: text
 ---
 
-It is the text that has to draw.
+It is the text that has to draw. Its default value is:
 
-Its default value is `""`.
+```javascript
+""
+```

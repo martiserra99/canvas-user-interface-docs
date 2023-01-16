@@ -3,14 +3,18 @@ nav: font
 title: font
 ---
 
-It is the font of the text. It is an object that has the properties `family`, `size` and `weight`.
+It is the font of the text. It is an object that has these properties:
 
-The `family` property is the font family of the text.
-
-The `size` property is the font size of the text.
-
-The `weight` property is the font weight of the text.
+- **family**: It is the font familty of the text.
+- **size**: It is the font size of the text.
+- **weight**: It is the font weight of the text.
 
 Its default value is:
 
-`{ family: "Courier New", size: 16, weight: 400 }`
+```javascript
+{
+  family: "Courier New",
+  size: 16,
+  weight: 400
+}
+```

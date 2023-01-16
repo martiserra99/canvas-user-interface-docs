@@ -3,16 +3,23 @@ nav: size
 title: size
 ---
 
-It is the size of the view. It is an object with the properties `width` and `height`.
+It is the size of the view. It is an object with these properties:
 
-Each of these properties is an object with the properties `unit` and `value`.
+- **width**: Width of the view.
+- **height**: Height of the view.
 
-The `unit` property is the unit used to define the size and it can be `"px"` and `"%"`.
+Each of these properties is an object with these properties:
 
-The `value` property is the size in terms of the unit specified in the other property.
+- **unit**: It is the unit used to define the size and it can be `"px"` and `"%"`.
+- **value**: It is the size in terms of the unit specified in the other property.
 
 If the unit is `"px"` the value will be in px. If it is `"%"` the value will be the percentage of its maximum available size.
 
 Its default value is:
 
-`{ width: { unit: "%", value: 100 }, height: { unit: "%", value: 100 } }`
+```javascript
+{
+  width: { unit: "%", value: 100 },
+  height: { unit: "%", value: 100 }
+}
+```

@@ -3,8 +3,16 @@ nav: imageSize
 title: imageSize
 ---
 
-It is the size of the image. It is an object with the properties `width` and `height` and each of them has to contain a number.
+It is the size of the image. It is an object with these properties:
+
+- **width**: Width of the image.
+- **height**: Height of the image.
 
 Its default value is:
 
-`{ width: 100, height: 100 }`
+```javascript
+{
+  width: 100,
+  height: 100
+}
+```
