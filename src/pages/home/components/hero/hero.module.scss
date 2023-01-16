@@ -1,9 +1,14 @@
 @use "styles/variables" as *;
 
 .hero {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
   border-bottom: 1px solid $color-divider;
+
+  @media (min-width: 31.25em /* 500px */) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 
   @media (min-width: 62.5em /* 1000px */) {
     padding-top: 20rem;

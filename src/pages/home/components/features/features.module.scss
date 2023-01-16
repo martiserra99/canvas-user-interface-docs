@@ -1,14 +1,19 @@
 @use "styles/variables" as *;
 
 .features {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 31.25em /* 500px */) {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
 
   @media (min-width: 40.625em /* 650px */) {
     flex-direction: row;
