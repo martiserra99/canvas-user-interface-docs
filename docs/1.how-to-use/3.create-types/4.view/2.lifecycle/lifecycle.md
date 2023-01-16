@@ -22,25 +22,25 @@ To perform these tasks the view will call its lifecycle functions. These functio
 ```javascript
 viewType.lifecycle.set("onCreate", function (view) {
   // Code
-});
+})
 ```
 
 Notice how the first parameter of the function is the view itself. That happens with every lifecycle function.
 
 The lifecycle functions of the view type that we can use are:
 
-- `onCreate(view)`: It is called when the view enters the _create_ state.
+- **onCreate(view)**: It is called when the view enters the _create_ state.
 
-- `onStart(view)`: It is called when the view enters the _start_ state.
+- **onStart(view)**: It is called when the view enters the _start_ state.
 
-- `onMeasure(view, maxSize)`: It is called when the view enters the _measure_ state. The second parameter is the maximum size that was passed in its `.measure(maxSize)` method.
+- **onMeasure(view, maxSize)**: It is called when the view enters the _measure_ state. The second parameter is the maximum size that was passed in its `.measure(maxSize)` method.
 
-- `getSize(view, maxSize)`: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the view has to compute and return its size. The size has to be in this format: `{ width: int, height: int }`.
+- **getSize(view, maxSize)**: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the view has to compute and return its size. The size has to be in this format: `{ width: int, height: int }`.
 
-- `onLocate(view, coords)`: It is called when the view enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
+- **onLocate(view, coords)**: It is called when the view enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
 
-- `onDraw(view)`: It is called when the view enters the _draw_ state.
+- **onDraw(view)**: It is called when the view enters the _draw_ state.
 
-- `drawItself(view, ctx)`: It is called in the _draw_ state. This lifecycle function needs to be implemented and in it the view has to make all the drawings in the canvas context. The second parameter is the canvas context that was passed in its `.draw(ctx)` method.
+- **drawItself(view, ctx)**: It is called in the _draw_ state. This lifecycle function needs to be implemented and in it the view has to make all the drawings in the canvas context. The second parameter is the canvas context that was passed in its `.draw(ctx)` method.
 
-- `onEnd(view)`: It is called when the view enters the _end_ state.
+- **onEnd(view)**: It is called when the view enters the _end_ state.

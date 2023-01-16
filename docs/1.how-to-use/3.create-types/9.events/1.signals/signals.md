@@ -17,9 +17,8 @@ Every time that an action occurs on the user interface the UI will send a signal
 
 When calling the `.signal(signal)` method on the element the UI will pass as argument an object with these properties:
 
-- `type`: It is the type of action that occurred.
-
-- `data`: It is data about the action.
+- **type**: It is the type of action that occurred.
+- **data**: It is data about the action.
 
 The `data` property will contain different data depending on the type of action. If it is a mouse action the data will be the coords of the mouse in this format: `{ x: int, y: int }`. If it is a key action the data will be the key that was pressed or released.
 

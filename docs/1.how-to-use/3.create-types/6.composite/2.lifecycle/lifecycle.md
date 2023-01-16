@@ -22,25 +22,25 @@ To perform these tasks the composite will call its lifecycle functions. These fu
 ```javascript
 compositeType.lifecycle.set("onCreate", function (composite) {
   // Code
-});
+})
 ```
 
 Notice how the first parameter of the function is the composite itself. That happens with every lifecycle function.
 
 The lifecycle functions of the composite type that we can use are:
 
-- `onCreate(composite)`: It is called when the composite enters the _create_ state.
+- **onCreate(composite)**: It is called when the composite enters the _create_ state.
 
-- `getElement(composite)`: It is called in the _create_ state. This lifecycle function needs to be implemented and in it the composite has to create and return the element (if the element is a layout the elements it contains may also be created).
+- **getElement(composite)**: It is called in the _create_ state. This lifecycle function needs to be implemented and in it the composite has to create and return the element (if the element is a layout the elements it contains may also be created).
 
-- `onStart(composite)`: It is called when the composite enters the _start_ state.
+- **onStart(composite)**: It is called when the composite enters the _start_ state.
 
-- `updateElement(composite, element)`: It is called in the _start_ state. This lifecycle function needs to be implemented and in it the composite has to update the element (if the element is a layout the elements it contains may also be updated). The second parameter is the element that has to be updated.
+- **updateElement(composite, element)**: It is called in the _start_ state. This lifecycle function needs to be implemented and in it the composite has to update the element (if the element is a layout the elements it contains may also be updated). The second parameter is the element that has to be updated.
 
-- `onMeasure(composite, maxSize)`: It is called when the composite enters the _measure_ state. The second parameter is the maximum size that was passed in its `.measure(maxSize)` method.
+- **onMeasure(composite, maxSize)**: It is called when the composite enters the _measure_ state. The second parameter is the maximum size that was passed in its `.measure(maxSize)` method.
 
-- `onLocate(composite, coords)`: It is called when the composite enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
+- **onLocate(composite, coords)**: It is called when the composite enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
 
-- `onDraw(composite)`: It is called when the composite enters the _draw_ state.
+- **onDraw(composite)**: It is called when the composite enters the _draw_ state.
 
-- `onEnd(composite)`: It is called when the composite enters the _end_ state.
+- **onEnd(composite)**: It is called when the composite enters the _end_ state.
