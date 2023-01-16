@@ -17,7 +17,7 @@ export default function Markdown({ id, className, title, content }) {
             const { src, alt } = node.children[0].properties
             return (
               <div className={styles.imgContainer}>
-                <Image src={src} alt={alt} fill />
+                <Image src={src} alt={alt} fill priority />
               </div>
             )
           },
