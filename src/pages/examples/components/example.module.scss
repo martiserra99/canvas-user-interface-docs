@@ -1,0 +1,12 @@
+@use "styles/variables" as *;
+
+.example {
+  flex-grow: 1;
+  width: 0px;
+  aspect-ratio: 1 / 1;
+  max-width: 80vh;
+  background: none;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 0.5rem solid $color-divider;
+}

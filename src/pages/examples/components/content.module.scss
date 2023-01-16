@@ -1,0 +1,26 @@
+@use "styles/variables" as *;
+
+.content {
+  padding: 0 $margin-mobile;
+  overflow: hidden;
+
+  @media (min-width: 43.75em /* 700px */) {
+    padding: 0 $margin;
+  }
+}
+
+.container {
+  height: calc(100vh - $header-height);
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: $header-height;
+
+  @media (min-width: 43.75em /* 700px */) {
+    gap: 2rem;
+  }
+}
