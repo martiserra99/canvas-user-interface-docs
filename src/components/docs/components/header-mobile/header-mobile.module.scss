@@ -14,6 +14,10 @@
   border-bottom: 0.1rem solid $color-divider;
   padding: 0 $margin-mobile;
 
+  @media (min-width: 43.75em /* 700px */) {
+    padding: 0 $margin;
+  }
+
   @media (min-width: 59.375em /* 950px */) {
     display: none;
   }
