@@ -6,12 +6,17 @@ title: Text (text)
 It is text. You can define its color, its size, its font...
 
 ```javascript
-const text = canvasUI.view.new("text-1", "text");
+const text = canvasUI.view.new("text-1", "text")
 
-text.set("text", "Hello World");
+text.set("text", "Hello World!")
+
 text.set("font", {
-  family: "Raleway",
-  size: 20,
-  weight: 400,
-});
+  family: "Courier New",
+  size: 24,
+  weight: 700,
+})
+
+text.set("color", "#14213d")
 ```
+
+![text](/docs/elements/views/text.svg)
