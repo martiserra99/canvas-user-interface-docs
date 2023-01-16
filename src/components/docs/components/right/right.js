@@ -1,36 +1,29 @@
 import styles from "./right.module.scss"
 
 import Link from "next/link"
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useRef, useCallback } from "react"
 
 export default function Right({ slug, right }) {
   const [active, setActive] = useState(null)
   const [marker, setMarker] = useState(null)
-  const [links, setLinks] = useState([])
-  const addLink = useCallback((link) => {
-    setLinks((currLinks) => [link, ...currLinks])
+  const linksRef = useRef([])
+
+  const scrollListner = useCallback(() => {
+    for (const [i, link] of linksRef.current.entries()) {
+      if (window.scrollY + 1 < linkElemTop(link)) continue
+      setActive(link.dataset.id)
+      setMarker(linksRef.current.length - i - 1)
+      return
+    }
+    setActive(null)
+    setMarker(null)
   }, [])
 
-  useEffect(() => {
-    const listener = () => {
-      for (const [i, link] of links.entries())
-        if (window.scrollY + 1 >= getLinkElementTop(link)) {
-          setActive(link.dataset.id)
-          setMarker(links.length - i - 1)
-          return
-        }
-      setActive(null)
-      setMarker(null)
-    }
-    listener()
-    window.addEventListener("scroll", listener)
-    return () => window.removeEventListener("scroll", listener)
-  }, [links])
+  useScrollListener(scrollListner)
 
-  function handleLinkClick(e) {
+  const handleLinkClick = (e) => {
     e.preventDefault()
-    const top = getLinkElementTop(e.target)
-    window.scrollTo({ behavior: "smooth", top })
+    window.scrollTo({ behavior: "smooth", top: linkElemTop(e.target) })
   }
 
   return (
@@ -45,11 +38,14 @@ export default function Right({ slug, right }) {
             right.map((section, i) => (
               <li key={section.slug}>
                 <Link
-                  data-id={section.slug}
-                  ref={addLink}
-                  href={`#${section.slug}`}
+                  data-id={linkId(section)}
+                  ref={(link) => {
+                    if (i === 0) linksRef.current = [link]
+                    else linksRef.current.unshift(link)
+                  }}
+                  href={"#" + linkId(section)}
                   onClick={handleLinkClick}
-                  className={linkClassName(section.slug === active)}
+                  className={linkClassName(linkId(section) === active)}
                 >
                   {section.nav}
                 </Link>
@@ -57,12 +53,12 @@ export default function Right({ slug, right }) {
                   {section.subsections.map((subsection) => (
                     <li key={subsection.slug}>
                       <Link
-                        data-id={`${section.slug}/${subsection.slug}`}
-                        ref={addLink}
-                        href={`#${section.slug}/${subsection.slug}`}
+                        data-id={linkId(section, subsection)}
+                        ref={(link) => linksRef.current.unshift(link)}
+                        href={"#" + linkId(section, subsection)}
                         onClick={handleLinkClick}
                         className={linkClassName(
-                          `${section.slug}/${subsection.slug}` === active
+                          linkId(section, subsection) === active
                         )}
                       >
                         {subsection.nav}
@@ -79,10 +75,16 @@ export default function Right({ slug, right }) {
   )
 }
 
-function markerStyle(position) {
-  if (position === null) return { opacity: 0 }
-  console.log(position)
-  return { transform: `translateY(${position * 100}%)` }
+function useScrollListener(listener) {
+  useEffect(() => {
+    listener()
+    window.addEventListener("scroll", listener)
+    return () => window.removeEventListener("scroll", listener)
+  }, [listener])
+}
+
+function linkId(...sections) {
+  return sections.map((section) => section.slug).join("/")
 }
 
 function linkClassName(active) {
@@ -91,9 +93,14 @@ function linkClassName(active) {
   return className
 }
 
-function getLinkElementTop(link) {
+function linkElemTop(link) {
   const elem = document.getElementById(link.getAttribute("href").split("#")[1])
   const elemTop = elem.getBoundingClientRect().top
   const bodyTop = document.body.getBoundingClientRect().top
   return elemTop - bodyTop - 120
+}
+
+function markerStyle(position) {
+  if (position === null) return { opacity: 0 }
+  return { transform: `translateY(${position * 100}%)` }
 }
