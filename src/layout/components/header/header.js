@@ -1,14 +1,17 @@
-import styles from "./header.module.scss";
+import styles from "./header.module.scss"
 
-import { useState } from "react";
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 
-import Logo from "./components/logo";
-import Menu from "./components/menu";
-import Nav from "./components/nav/nav";
-import NavMobile from "./components/nav-mobile/nav-mobile";
+import Logo from "./components/logo"
+import Menu from "./components/menu"
+import Nav from "./components/nav/nav"
+import NavMobile from "./components/nav-mobile/nav-mobile"
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const router = useRouter()
+  const [open, setOpen] = useState(false)
+  useEffect(() => setOpen(false), [router.asPath])
   return (
     <>
       <header className={styles.header}>
@@ -20,5 +23,5 @@ export default function Header() {
       </header>
       <NavMobile open={open} />
     </>
-  );
+  )
 }
