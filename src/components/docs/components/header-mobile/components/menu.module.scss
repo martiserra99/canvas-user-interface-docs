@@ -1,0 +1,33 @@
+@use "styles/variables" as *;
+
+.menu {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  fill: $color-secondary;
+  font-family: "Poppins", sans-serif;
+  color: $color-secondary;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 2rem;
+  margin-left: -2rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    fill: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.svg {
+  height: 2.4rem;
+  fill: inherit;
+}
+
+.text {
+  font-size: 1.2rem;
+}
