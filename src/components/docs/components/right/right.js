@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback } from "react"
 
 export default function Right({ slug, right }) {
   const [active, setActive] = useState(null)
+  const [marker, setMarker] = useState(null)
   const [links, setLinks] = useState([])
   const addLink = useCallback((link) => {
     setLinks((currLinks) => [link, ...currLinks])
@@ -12,10 +13,14 @@ export default function Right({ slug, right }) {
 
   useEffect(() => {
     const listener = () => {
-      for (const link of links)
-        if (window.scrollY + 1 >= getLinkTop(link))
-          return setActive(link.dataset.id)
+      for (const [i, link] of links.entries())
+        if (window.scrollY + 1 >= getLinkElementTop(link)) {
+          setActive(link.dataset.id)
+          setMarker(links.length - i - 1)
+          return
+        }
       setActive(null)
+      setMarker(null)
     }
     listener()
     window.addEventListener("scroll", listener)
@@ -24,7 +29,7 @@ export default function Right({ slug, right }) {
 
   function handleLinkClick(e) {
     e.preventDefault()
-    const top = getLinkTop(e.target)
+    const top = getLinkElementTop(e.target)
     window.scrollTo({ behavior: "smooth", top })
   }
 
@@ -33,10 +38,11 @@ export default function Right({ slug, right }) {
       <div className={styles.content}>
         <h4 className={styles.title}>On This Page</h4>
         <ul className={styles.sections}>
+          <div className={styles.marker} style={markerStyle(marker)} />
           {right.length === 0 ? (
             <span className={styles.empty}>There are no sections.</span>
           ) : (
-            right.map((section) => (
+            right.map((section, i) => (
               <li key={section.slug}>
                 <Link
                   data-id={section.slug}
@@ -73,13 +79,19 @@ export default function Right({ slug, right }) {
   )
 }
 
+function markerStyle(position) {
+  if (position === null) return { opacity: 0 }
+  console.log(position)
+  return { transform: `translateY(${position * 100}%)` }
+}
+
 function linkClassName(active) {
   let className = styles.link
   if (active) className += ` ${styles.active}`
   return className
 }
 
-function getLinkTop(link) {
+function getLinkElementTop(link) {
   const elem = document.getElementById(link.getAttribute("href").split("#")[1])
   const elemTop = elem.getBoundingClientRect().top
   const bodyTop = document.body.getBoundingClientRect().top
