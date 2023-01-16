@@ -15,7 +15,7 @@ textArea.set("size", {
 
 textArea.set("text", "Hello World!")
 textArea.set("font", {
-  family: "Courier New",
+  family: "Poppins",
   size: 20,
   weight: 700,
 })
