@@ -3,14 +3,14 @@
   padding: 6.4rem;
 }
 
-.docs {
+.docs:not(.empty) {
   margin-bottom: 5rem;
 }
 
-.section {
+.section:not(.empty) {
   margin-bottom: 5rem;
 }
 
-.subsection {
+.subsection:not(.empty) {
   margin-bottom: 5rem;
 }

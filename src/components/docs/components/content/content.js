@@ -10,7 +10,7 @@ export default function Content({ content }) {
         id={content.slug}
         title={{ type: "h1", text: content.title }}
         content={content.content}
-        className={styles.docs}
+        className={markdownClassName(styles.docs, content.content)}
       />
       {content.sections.map((section) => (
         <Fragment key={section.slug}>
@@ -18,7 +18,7 @@ export default function Content({ content }) {
             id={section.slug}
             title={{ type: "h2", text: section.title }}
             content={section.content}
-            className={styles.section}
+            className={markdownClassName(styles.section, section.content)}
           />
           {section.subsections.map((subsection) => (
             <Markdown
@@ -26,11 +26,19 @@ export default function Content({ content }) {
               id={subsection.slug}
               title={{ type: "h3", text: subsection.title }}
               content={subsection.content}
-              className={styles.subsection}
+              className={markdownClassName(
+                styles.subsection,
+                subsection.content
+              )}
             />
           ))}
         </Fragment>
       ))}
     </div>
   );
+}
+
+function markdownClassName(className, content) {
+  if (content.trim() === "") return (className += ` ${styles.empty}`);
+  return className;
 }
