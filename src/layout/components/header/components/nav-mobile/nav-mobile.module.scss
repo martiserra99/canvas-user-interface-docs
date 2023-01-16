@@ -4,6 +4,7 @@
   position: fixed;
   inset: 0;
   top: $header-height;
+  z-index: 1000;
   background: white;
   padding-top: 4rem;
   overflow: hidden;
