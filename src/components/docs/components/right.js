@@ -3,7 +3,7 @@ import styles from "./right.module.scss"
 import Link from "next/link"
 import { useEffect, useState, useRef, useCallback } from "react"
 
-export default function Right({ slug, right }) {
+export default function Right({ right }) {
   const [active, setActive] = useState(null)
   const [marker, setMarker] = useState(null)
   const linksRef = useRef([])

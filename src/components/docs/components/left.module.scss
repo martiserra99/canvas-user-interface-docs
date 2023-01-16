@@ -1,13 +1,12 @@
 @use "styles/variables" as *;
 
 .left {
-  display: none;
-  height: calc(100vh - $header-height);
-  width: calc(#{$margin} + 24rem);
-  flex-shrink: 0;
+  width: 0;
 
   @media (min-width: 59.375em /* 950px */) {
-    display: block;
+    width: calc(#{$margin} + 24rem);
+    height: calc(100vh - $header-height);
+    flex-shrink: 0;
   }
 
   @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
@@ -17,19 +16,46 @@
 
 .content {
   position: fixed;
-  top: $header-height;
+  top: 0;
   left: 0;
-  height: calc(100vh - $header-height);
+  height: 100vh;
   width: calc(#{$margin} + 24rem);
-  border-right: 0.1rem solid $color-divider;
+  background: white;
   padding-left: $margin;
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
+  border-right: 0.1rem solid $color-divider;
+  z-index: 2000;
+  max-width: 75%;
   overflow: auto;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+
+  &.show {
+    transform: translateX(0%);
+  }
+
+  @media (min-width: 59.375em /* 950px */) {
+    top: $header-height;
+    left: 0;
+    height: calc(100vh - $header-height);
+    width: calc(#{$margin} + 24rem);
+    transform: translateX(0%);
+    transition: none;
+  }
 
   @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
     width: calc((100% - #{$max-width}) / 2 + 27rem);
     padding-left: calc((100% - #{$max-width}) / 2);
+  }
+}
+
+.logo {
+  width: min-content;
+  margin-bottom: 2rem;
+
+  @media (min-width: 59.375em /* 950px */) {
+    display: none;
   }
 }
 

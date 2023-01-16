@@ -1,13 +1,16 @@
-import styles from "./left.module.scss";
+import styles from "./left.module.scss"
 
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from "next/link"
+import { useRouter } from "next/router"
 
-export default function Left({ slug, left }) {
-  const router = useRouter();
+import Logo from "src/components/logo"
+
+export default function Left({ slug, left, show }) {
+  const router = useRouter()
   return (
     <nav className={styles.left}>
-      <div className={styles.content}>
+      <div className={contentClassName(show)}>
+        <Logo className={styles.logo} />
         <ul className={styles.sections}>
           {left.map((section) => (
             <li key={section.slug}>
@@ -33,15 +36,21 @@ export default function Left({ slug, left }) {
         </ul>
       </div>
     </nav>
-  );
+  )
+}
+
+function contentClassName(show) {
+  let className = styles.content
+  if (show) className += ` ${styles.show}`
+  return className
 }
 
 function linkClassName(router, section, subsection) {
-  let className = styles.link;
+  let className = styles.link
   if (
     router.query.section === section &&
     router.query.subsection === subsection
   )
-    className += ` ${styles.selected}`;
-  return className;
+    className += ` ${styles.selected}`
+  return className
 }

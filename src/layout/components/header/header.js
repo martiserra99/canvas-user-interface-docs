@@ -3,7 +3,7 @@ import styles from "./header.module.scss"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 
-import Logo from "./components/logo"
+import Logo from "../../../components/logo"
 import Menu from "./components/menu"
 import Nav from "./components/nav/nav"
 import NavMobile from "./components/nav-mobile/nav-mobile"
@@ -16,7 +16,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div className={styles.content}>
-          <Logo />
+          <Logo className={styles.logo} />
           <Nav />
           <Menu open={open} onClick={() => setOpen((open) => !open)} />
         </div>
