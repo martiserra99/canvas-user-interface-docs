@@ -5,10 +5,16 @@
   top: $header-height;
   left: 0;
   right: 0;
+  background: white;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: $docs-header-height-mobile;
   border-bottom: 0.1rem solid $color-divider;
   padding: 0 $margin-mobile;
+
+  @media (min-width: 59.375em /* 950px */) {
+    display: none;
+  }
 }
