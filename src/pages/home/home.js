@@ -1,8 +1,8 @@
-import Content from "./components/content/content";
-import Hero from "./components/hero/hero";
-import Features from "./components/features/features";
-import Steps from "./components/steps/steps";
-import Footer from "./components/footer/footer";
+import Content from "./components/content"
+import Hero from "./components/hero"
+import Features from "./components/features"
+import Steps from "./components/steps/steps"
+import Footer from "./components/footer"
 
 export default function Home() {
   return (
@@ -14,5 +14,5 @@ export default function Home() {
       </Content>
       <Footer />
     </>
-  );
+  )
 }

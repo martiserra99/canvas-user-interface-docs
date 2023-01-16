@@ -5,8 +5,8 @@ import { useEffect, useState } from "react"
 
 import Logo from "../../../components/logo"
 import Menu from "./components/menu"
-import Nav from "./components/nav/nav"
-import NavMobile from "./components/nav-mobile/nav-mobile"
+import Nav from "./components/nav"
+import NavMobile from "./components/nav-mobile"
 
 export default function Header() {
   const router = useRouter()

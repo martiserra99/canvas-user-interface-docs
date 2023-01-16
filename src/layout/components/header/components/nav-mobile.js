@@ -1,17 +1,17 @@
-import styles from "./nav-mobile.module.scss";
+import styles from "./nav-mobile.module.scss"
 
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useRef } from "react";
-import { Transition } from "react-transition-group";
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { useRef } from "react"
+import { Transition } from "react-transition-group"
 
-import IcGithub from "../ic-github";
-import IcLinkedin from "../ic-linkedin";
-import IcWeb from "../ic-web";
+import IcGithub from "./ic-github"
+import IcLinkedin from "./ic-linkedin"
+import IcWeb from "./ic-web"
 
 export default function NavMobile({ open }) {
-  const router = useRouter();
-  const nodeRef = useRef();
+  const router = useRouter()
+  const nodeRef = useRef()
   return (
     <Transition nodeRef={nodeRef} in={open} timeout={200}>
       {(state) => (
@@ -62,11 +62,11 @@ export default function NavMobile({ open }) {
         </div>
       )}
     </Transition>
-  );
+  )
 }
 
 function linkClassName(router, path) {
-  let className = styles.link;
-  if (router.pathname.startsWith(path)) className += ` ${styles.selected}`;
-  return className;
+  let className = styles.link
+  if (router.pathname.startsWith(path)) className += ` ${styles.selected}`
+  return className
 }
