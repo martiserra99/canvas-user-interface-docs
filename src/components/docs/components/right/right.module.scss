@@ -1,12 +1,17 @@
 @use "styles/variables" as *;
 
 .right {
+  display: none;
   padding-right: $margin;
   height: auto;
   width: calc(#{$margin} + 27rem);
   flex-shrink: 0;
   padding-top: 3.2rem;
   padding-bottom: 9.6rem;
+
+  @media (min-width: 84.375em /* 1350px */) {
+    display: block;
+  }
 
   @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
     padding-right: calc((100% - #{$max-width}) / 2);

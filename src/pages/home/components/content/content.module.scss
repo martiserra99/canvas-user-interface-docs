@@ -1,7 +1,11 @@
 @use "styles/variables" as *;
 
 .content {
-  padding: 0 $margin;
+  padding: 0 $margin-mobile;
+
+  @media (min-width: 43.75em /* 700px */) {
+    padding: 0 $margin;
+  }
 }
 
 .container {

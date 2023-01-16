@@ -1,6 +1,25 @@
+@use "styles/variables" as *;
+
 .content {
   flex-grow: 1;
-  padding: 6.4rem;
+  padding: 6.4rem $margin-mobile;
+  margin: 0 auto;
+  max-width: 70rem;
+  overflow: hidden;
+
+  @media (min-width: 43.75em /* 700px */) {
+    padding: 6.4rem $margin;
+  }
+
+  @media (min-width: 59.375em /* 950px */) {
+    padding: 6.4rem 6.4rem;
+    max-width: 80rem;
+  }
+
+  @media (min-width: 84.375em /* 1350px */) {
+    max-width: none;
+    padding: 6.4rem 9.6rem;
+  }
 }
 
 .docs:not(.empty) {

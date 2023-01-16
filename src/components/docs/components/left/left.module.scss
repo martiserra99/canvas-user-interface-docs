@@ -1,9 +1,14 @@
 @use "styles/variables" as *;
 
 .left {
+  display: none;
   height: calc(100vh - $header-height);
-  width: calc(#{$margin} + 27rem);
+  width: calc(#{$margin} + 24rem);
   flex-shrink: 0;
+
+  @media (min-width: 59.375em /* 950px */) {
+    display: block;
+  }
 
   @media (min-width: 89.25em /* 1428px = $max-width + $margin * 2 */) {
     width: calc((100% - #{$max-width}) / 2 + 27rem);
@@ -15,7 +20,7 @@
   top: $header-height;
   left: 0;
   height: calc(100vh - $header-height);
-  width: calc(#{$margin} + 27rem);
+  width: calc(#{$margin} + 24rem);
   border-right: 0.1rem solid $color-divider;
   padding-left: $margin;
   padding-top: 3.2rem;

@@ -8,8 +8,12 @@
   z-index: 1000;
   height: $header-height;
   background: white;
-  padding: 0 $margin;
+  padding: 0 $margin-mobile;
   border-bottom: 0.1rem solid $color-divider;
+
+  @media (min-width: 43.75em /* 700px */) {
+    padding: 0 $margin;
+  }
 }
 
 .content {
