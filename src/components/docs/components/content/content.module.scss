@@ -2,13 +2,18 @@
 
 .content {
   flex-grow: 1;
-  padding: 6.4rem $margin-mobile;
+  padding-left: $margin-mobile;
+  padding-right: $margin-mobile;
+  padding-bottom: 6.4rem;
+  padding-top: calc($docs-header-height-mobile + 3.2rem);
   margin: 0 auto;
   max-width: 70rem;
   overflow: hidden;
 
   @media (min-width: 43.75em /* 700px */) {
-    padding: 6.4rem $margin;
+    padding-top: calc($docs-header-height-mobile + 6.4rem);
+    padding-left: $margin;
+    padding-right: $margin;
   }
 
   @media (min-width: 59.375em /* 950px */) {

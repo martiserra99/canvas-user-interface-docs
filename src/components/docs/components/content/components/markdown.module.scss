@@ -1,10 +1,14 @@
 @use "styles/variables" as *;
 
 .h1 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: $color-primary;
   margin-bottom: 2rem;
+
+  @media (min-width: 43.75em /* 700px */) {
+    font-size: 3.6rem;
+  }
 }
 
 .h2 {
@@ -12,17 +16,23 @@
   font-weight: 700;
   color: $color-primary;
   margin-bottom: 2rem;
-  padding-top: 3rem;
-  border-top: 1px solid $color-divider;
+
+  @media (min-width: 43.75em /* 700px */) {
+    font-size: 2.8rem;
+  }
 }
 
 .h3 {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: $color-primary;
   margin-bottom: 2rem;
   padding-left: 2rem;
+
+  @media (min-width: 43.75em /* 700px */) {
+    font-size: 2rem;
+  }
 
   &::before {
     content: "";
