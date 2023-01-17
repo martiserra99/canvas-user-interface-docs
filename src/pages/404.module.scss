@@ -1,0 +1,36 @@
+@use "styles/variables" as *;
+
+.content {
+  height: calc(100vh - $header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $header-height;
+  padding-left: $margin-mobile;
+  padding-right: $margin-mobile;
+  color: $color-primary;
+}
+
+.heading {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 6rem;
+  margin-bottom: 1.6rem;
+
+  @media (min-width: 43.75em /* 700px */) {
+    font-size: 6.4rem;
+    line-height: 8rem;
+  }
+}
+
+.text {
+  font-size: 1.8rem;
+  color: $color-secondary;
+  text-align: center;
+
+  @media (min-width: 43.75em /* 700px */) {
+    font-size: 2rem;
+  }
+}

@@ -1,5 +1,1 @@
-export {
-  default,
-  getStaticPaths,
-  getStaticProps,
-} from "src/pages/elements/elements";
+export { default, getStaticPaths, getStaticProps } from "src/pages/elements"
