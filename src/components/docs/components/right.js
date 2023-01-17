@@ -1,25 +1,27 @@
 import styles from "./right.module.scss"
 
 import Link from "next/link"
-import { useEffect, useState, useRef, useCallback } from "react"
+import { useState, useCallback } from "react"
+
+import useScrollListener from "src/hooks/use-scroll-listener"
 
 export default function Right({ right }) {
   const [active, setActive] = useState(null)
   const [marker, setMarker] = useState(null)
-  const linksRef = useRef([])
 
-  const scrollListner = useCallback(() => {
-    for (const [i, link] of linksRef.current.entries()) {
-      if (window.scrollY + 1 < linkElemTop(link)) continue
-      setActive(link.dataset.id)
-      setMarker(linksRef.current.length - i - 1)
-      return
-    }
-    setActive(null)
-    setMarker(null)
-  }, [])
-
-  useScrollListener(scrollListner)
+  useScrollListener(
+    useCallback(() => {
+      const links = [...document.querySelectorAll(`.${styles.link}`)].reverse()
+      for (const [position, link] of links.entries()) {
+        if (window.scrollY + 1 < linkElemTop(link)) continue
+        setActive(link.dataset.id)
+        setMarker(links.length - position - 1)
+        return
+      }
+      setActive(null)
+      setMarker(null)
+    }, [])
+  )
 
   const handleLinkClick = (e) => {
     e.preventDefault()
@@ -35,14 +37,10 @@ export default function Right({ right }) {
           {right.length === 0 ? (
             <span className={styles.empty}>There are no sections.</span>
           ) : (
-            right.map((section, i) => (
+            right.map((section) => (
               <li key={section.slug}>
                 <Link
                   data-id={linkId(section)}
-                  ref={(link) => {
-                    if (i === 0) linksRef.current = [link]
-                    else linksRef.current.unshift(link)
-                  }}
                   href={"#" + linkId(section)}
                   onClick={handleLinkClick}
                   className={linkClassName(linkId(section) === active)}
@@ -54,7 +52,6 @@ export default function Right({ right }) {
                     <li key={subsection.slug}>
                       <Link
                         data-id={linkId(section, subsection)}
-                        ref={(link) => linksRef.current.unshift(link)}
                         href={"#" + linkId(section, subsection)}
                         onClick={handleLinkClick}
                         className={linkClassName(
@@ -73,14 +70,6 @@ export default function Right({ right }) {
       </div>
     </div>
   )
-}
-
-function useScrollListener(listener) {
-  useEffect(() => {
-    listener()
-    window.addEventListener("scroll", listener)
-    return () => window.removeEventListener("scroll", listener)
-  }, [listener])
 }
 
 function linkId(...sections) {
