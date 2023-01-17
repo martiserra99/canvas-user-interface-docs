@@ -1,10 +1,23 @@
-import "styles/globals.scss";
+import "styles/globals.scss"
 
-import Head from "next/head";
+import Head from "next/head"
+import { getCookie, setCookie } from "cookies-next"
 
-import Layout from "src/layout/layout";
+import Layout from "src/layout/layout"
+import MessageCookies from "src/components/message-cookies"
+import { useEffect, useState } from "react"
 
 export default function App({ Component, pageProps }) {
+  const [cookies, setCookies] = useState(null)
+  useEffect(() => setCookies(getCookie("cookies")), [])
+  const handleCookiesRefuse = () => {
+    setCookie("cookies", "refuse", { maxAge: 60 * 60 * 24 * 365 })
+    setCookies("refuse")
+  }
+  const handleCookiesAccept = () => {
+    setCookie("cookies", "accept", { maxAge: 60 * 60 * 24 * 365 })
+    setCookies("accept")
+  }
   return (
     <>
       <Head>
@@ -19,7 +32,13 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        {cookies === undefined && (
+          <MessageCookies
+            onRefuse={handleCookiesRefuse}
+            onAccept={handleCookiesAccept}
+          />
+        )}
       </Layout>
     </>
-  );
+  )
 }
