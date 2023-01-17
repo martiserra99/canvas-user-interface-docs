@@ -16,8 +16,8 @@ imageArea.set("size", {
 imageArea.set("imageSize", { width: 100, height: 100 })
 imageArea.set("imageSrc", "/img/logo.svg")
 
-imageArea.set("background", "#F98E41")
-imageArea.set("border", { size: 10, color: "#E0803B" })
+imageArea.set("background", "#F9BC41")
+imageArea.set("border", { size: 10, color: "#E0A93B" })
 imageArea.set("corner", { type: "round", size: 10 })
 ```
 
