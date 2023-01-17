@@ -24,7 +24,7 @@ The `gap` property defines the gap between the cells.
 
 Now, we are ready to start implementing some lifecycle functions.
 
-We will start by implementing the `getElement` lifecycle function of the _create_ state. We will do it like so:
+We will start by implementing the `getElement` lifecycle function of the _create_ state, like so:
 
 ```javascript
 gridNumbersType.lifecycle.set("getElement", function (composite) {

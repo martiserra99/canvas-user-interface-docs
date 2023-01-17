@@ -37,15 +37,15 @@ The lifecycle functions of the layout type that we can use are:
 
 - **sortChildrenToSetSizes(layout, maxSize)**: It is called in the _measure_ state. In this function, the layout returns the children sorted by the order in which their sizes will be computed. If you don't implement this function, the order of the children will be the order in which they were in inserted in the layout.
 
-- **getChildMaxSize(layout, maxSize, child, childrenWithSizes)**: It is called in the _measure_ state for every child. In this function, the layout computes and returns the maximum size of the child. The third parameter is the child and the fourth parameter is the sorted children that have their sizes defined. This function needs to be implemented, and the size has to be in this format: `{ width: int, height: int }`.
+- **getChildMaxSize(layout, maxSize, child, childrenWithSizes)**: It is called in the _measure_ state for every child. This function needs to be implemented and in it the layout computes and returns the maximum size of the child. The third parameter is the child and the fourth parameter is the sorted children that have their sizes defined.
 
-- **getSize(layout, maxSize)**: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the layout has to compute and return its size. The size has to be in this format: `{ width: int, height: int }`.
+- **getSize(layout, maxSize)**: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the layout has to compute and return its size.
 
 - **onLocate(layout, coords)**: It is called when the layout enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
 
 - **sortChildrenToSetCoords(layout, coords)**: It is called in the _locate_ state. In this function, the layout returns the children sorted by the order in which their coords will be computed. If you don't implement this function, the order of the children will be the order in which they were in inserted in the layout.
 
-- **getChildCoords(layout, coords, child, childrenWithCoords)**: It is called in the _locate_ state for every child. In this function, the layout computes and returns the coords of the child. The third parameter is the child and the fourth parameter is the sorted children that have their coords defined. This function needs to be implemented and the coords have to be in this format: `{ x: int, y: int }`.
+- **getChildCoords(layout, coords, child, childrenWithCoords)**: It is called in the _locate_ state for every child. This function needs to be implemented and in it the layout computes and returns the coords of the child. The third parameter is the child and the fourth parameter is the sorted children that have their coords defined.
 
 - **onDraw(layout)**: It is called when the layout enters the _draw_ state.
 

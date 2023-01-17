@@ -10,9 +10,3 @@ To create a view, you have to call the function `canvasUI.view.new(id, type)`. T
 ```javascript
 const text = canvasUI.view.new("text-1", "text")
 ```
-
-Every view has some properties that can be used to modify how it is drawn (ex: text). To change a property, you have to use the `.set(property, value)` method, like so:
-
-```javascript
-text.set("text", "Hello World!")
-```

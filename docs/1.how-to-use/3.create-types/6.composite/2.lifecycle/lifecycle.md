@@ -5,15 +5,17 @@ title: Lifecycle
 
 The composite element goes through different lifecycle states, and it performs different tasks in each one of them:
 
-- **Create**: It may perform some initial tasks and store some data if needed. Then, it creates an element. In case that the element is a layout, it may create the elements the layout contains (most likely).
+- **Create**: It creates an element. In case that the element is a layout, it may create the elements the layout contains (most likely).
 
-- **Start**: It may compute and store some data that may be used for the next states. Then, it updates the element and the elements it contains (in case that the element is a layout) and it calls the `.start()` method on the element.
+- **Start**: It updates the element and the elements it contains (in case that the element is a layout) and it calls the `.start()` method on the element.
 
 - **Measure**: It calls the `.measure(maxSize)` method on the element with the maximum size that was passed in its `.measure(maxSize)` method. Then, the size of the element is assigned to its `size` property.
 
 - **Locate**: It calls the `.locate(coords)` method on the element with the coords that were passed in its `.locate(coords)` method. Then, the coords of the element are assigned to its `coords` property.
 
 - **Draw**: It calls the `.draw(ctx)` method on the element with the canvas context that was passed in its `.draw(ctx)` method.
+
+To perform these tasks, the composite will call its lifecycle functions. These functions are implemented differently by every composite type and to implement them you have to use the .lifecycle.set(name, func) method, like so:
 
 ```javascript
 compositeType.lifecycle.set("onCreate", function (composite) {

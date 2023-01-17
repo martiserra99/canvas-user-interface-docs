@@ -1,6 +1,6 @@
 ---
-nav: Custom Signals
-title: Custom Signals
+nav: Custom signals
+title: Custom signals
 ---
 
 You can use the `.signal(signal)` method to create your custom signals and create events that are triggered when this signal takes place. This technique is very useful when creating events for the composite types, like so:
@@ -13,25 +13,31 @@ twoTextsType.lifecycle.set("getElement", function (composite) {
   linear.set("size", { width: "auto", height: "auto" })
   linear.set("gap", 20)
 
-  const textLeft = canvasUI.view.new("textLeft", "text")
-  textLeft.set("text", "Hello")
-  const textRight = canvasUI.view.new("textRight", "text")
-  textRight.set("text", "Goodbye")
+  const textL = canvasUI.view.new("textL", "text")
+  const textR = canvasUI.view.new("textR", "text")
 
-  linear.insert(textLeft)
-  linear.insert(textRight)
+  textL.set("text", "LEFT")
+  textR.set("text", "RIGHT")
 
-  const sendSignal = (text) =>
-    composite.signal({ type: "textClick", data: text.get("text") })
-  textLeft.listeners.add("click", sendSignal)
-  textRight.listeners.add("click", sendSignal)
+  linear.insert(textL)
+  linear.insert(textR)
+
+  const signal = (text) => {
+    composite.signal({
+      type: "clickText",
+      data: text.get("text"),
+    })
+  }
+
+  textL.listeners.add("click", signal)
+  textR.listeners.add("click", signal)
 
   return linear
 })
 
 twoTextsType.events.set("clickText", function (text, signal, state) {
-  if (signal.type !== "textClick") return { event: false }
-  return { event: true, data: signal.data }
+  if (signal.type === "clickText") return { event: true, data: signal.data }
+  return { event: false }
 })
 ```
 

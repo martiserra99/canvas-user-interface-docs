@@ -35,7 +35,7 @@ The lifecycle functions of the view type that we can use are:
 
 - **onMeasure(view, maxSize)**: It is called when the view enters the _measure_ state. The second parameter is the maximum size that was passed in its `.measure(maxSize)` method.
 
-- **getSize(view, maxSize)**: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the view has to compute and return its size. The size has to be in this format: `{ width: int, height: int }`.
+- **getSize(view, maxSize)**: It is called in the _measure_ state. This lifecycle function needs to be implemented and in it the view has to compute and return its size.
 
 - **onLocate(view, coords)**: It is called when the view enters the _locate_ state. The second parameter is the coords that were passed in its `.locate(coords)` method.
 

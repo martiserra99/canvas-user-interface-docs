@@ -3,8 +3,6 @@ nav: Events
 title: Events
 ---
 
-Now that you understand everything about signals, you are ready to understand how to create events.
-
 To create the events that the element type has to respond to, you have to use the `.events.set(name, func)` method of the element type, like so:
 
 ```javascript
@@ -19,54 +17,53 @@ This function will be called every time that the `.signal(signal)` method of the
 
 The function needs to return an object with these properties:
 
-- **event**: It is a boolean that determines if the event was triggered or not. If it is `true` it means that the event was triggered.
-- **data**: It may be defined in case that the `event` property is `true`. It specifies data about the event that the event listeners will be able to use (ex: coords).
+- **event**: It is a boolean that defines about whether the event was triggered or not. If it is `true` it means it was and if it is false it means it wasn't.
+- **data**: It may be used when `event` is `true`, and it defines data about the event.
 
 The following code shows how to create an event that is triggered when we click outside the element:
 
 ```javascript
 elementType.events.set("clickOutside", function (element, signal, state) {
-  if (signal.type !== "mousedown") return { event: false }
-  const coords = signal.data
-  if (inRectangle(coords, element.coords, element.size)) return { event: false }
-  return { event: true, data: coords }
+  if (signal.type === "mousedown") {
+    const coords = signal.data
+    if (outRectangle(coords, element.coords, element.size))
+      return { event: true, data: coords }
+    else return { event: false }
+  }
+  return { event: false }
 })
 
-const inRectangle = function (coords, rectangleCoords, rectangleSize) {
+const outRectangle = function (coords, rectangleCoords, rectangleSize) {
   return (
-    coords.x >= rectangleCoords.x &&
-    coords.y >= rectangleCoords.y &&
-    coords.x <= rectangleCoords.x + rectangleSize.width &&
-    coords.y <= rectangleCoords.y + rectangleSize.height
+    (coords.x < rectangleCoords.x) |
+    (coords.y < rectangleCoords.y) |
+    (coords.x > rectangleCoords.x + rectangleSize.width) |
+    (coords.y > rectangleCoords.y + rectangleSize.height)
   )
 }
 ```
 
 When creating an event, it may be needed to store some data for later use. To do that, we can use the `state` parameter. This parameter is used to store some data about the state of the element in relation to the event. It has these methods:
 
-- **set(key, value)**: To add or update a value with the specified key.
-
-- **get(key, value)**: To get the value from the specified key. If the key is not defined, it will return the value of the second parameter.
-
-- **del(key)**: To delete a key with its value.
-
-- **has(key)**: To check whether the key exists or not. If it exists, it will return `true`.
+- **set(key, value)**: To set a key with a value.
+- **get(key, value)**: To get the value of a key (second argument if not exists).
+- **del(key)**: To delete a key.
+- **has(key)**: To check whether the key exists or not.
 
 The following code shows how to use the `state` parameter to create an event that is triggered when the same key is pressed twice:
 
 ```javascript
-elementType.events.set("keyPressedTwice", function (view, signal, state) {
-  if (signal.type !== "keydown") return { event: false }
-  const key = signal.data
-  const lastKey = state.get("lastKey", "")
-
-  if (lastKey === "") state.set("lastKey", key)
-  else if (lastKey !== key) state.del("lastKey")
-  else {
-    state.del("lastKey")
-    return { event: true, data: key }
+elementType.events.set("keyPressedTwice", function (element, signal, state) {
+  if (signal.type === "keydown") {
+    const key = signal.data
+    const lastKey = state.get("lastKey", null)
+    if (key === lastKey) {
+      state.del("lastKey")
+      return { event: true, data: key }
+    }
+    if (lastKey === null) state.set("lastKey", key)
+    else state.del("lastKey")
   }
-
   return { event: false }
 })
 ```

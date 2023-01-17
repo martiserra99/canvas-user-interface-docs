@@ -30,3 +30,11 @@ The element will be able to call these functions by using the `.inner.call(name,
 ```javascript
 const number = element.inner.call("changeNumber", 3)
 ```
+
+Moreover, the element itself will also be able to use the `.inner.fun(name, func)` method to create inner functions:
+
+```javascript
+element.inner.fun("sayHello", function (element) {
+  console.log("Hello")
+})
+```
