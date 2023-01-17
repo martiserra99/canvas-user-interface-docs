@@ -19,7 +19,7 @@ Its default value is:
 
 ```javascript
 {
-  width: { unit: "%", value: 100 },
-  height: { unit: "%", value: 100 }
+  width: { unit: "px", value: 100 },
+  height: { unit: "px", value: 100 }
 }
 ```
