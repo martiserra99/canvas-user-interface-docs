@@ -14,7 +14,7 @@ export default function Docs({ slug, left, right, content }) {
   return (
     <>
       <Head>
-        <title>{content.title} | Canvas User Interface</title>
+        <title>{`${content.title} | Canvas User Interface`}</title>
       </Head>
       <HeaderMobile onClickMenu={() => setOpen(true)} />
       <OverlayMobile show={open} onClick={() => setOpen(false)} />
