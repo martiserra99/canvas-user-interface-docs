@@ -3,7 +3,7 @@ nav: Linear
 title: Linear (linear)
 ---
 
-It is a layout that lets you place the children linearly one next to the other one horizontally and vertically.
+It is a layout that lets you place the children linearly, one next to the other one horizontally and vertically.
 
 ```javascript
 const linear = canvasUI.layout.new("linear-1", "linear")

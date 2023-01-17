@@ -3,7 +3,7 @@ nav: bias
 title: bias
 ---
 
-It is only used when the child is attached to both sides of the same direction. When that happens you can use this property to define a percentage that specify how near is the child to what side.
+It is only used when the child is attached to both sides of the same direction. When that happens, you can use this property to define a percentage that specify how near is the child to what side.
 
 It is an object that has these properties:
 

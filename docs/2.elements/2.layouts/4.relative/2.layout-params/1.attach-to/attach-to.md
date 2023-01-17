@@ -10,7 +10,7 @@ It defines where the child is attached to. It is an object with these properties
 - **bottom**: It defines where the bottom side of the child is attached to.
 - **left**: It defines where the left side of the child is attached to.
 
-Each of these properties can be `null` to define that it is not attached in this side, `"parent"` to define that it is attached to the side of its parent and an object with the following properties to define that it is attached to the side of another child:
+Each of these properties can be `null` to define that it is not attached to this side, `"parent"` to define that it is attached to the side of its parent and an object with the following properties to define that it is attached to the side of another child:
 
 - **side**: The side of this other child that the child is attached to. It can be `"top"`, `"right"`, `"bottom"` and `"left"`.
 - **child**: The id of this other child that the child is attached to.
