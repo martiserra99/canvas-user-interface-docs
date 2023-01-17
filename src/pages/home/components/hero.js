@@ -1,6 +1,6 @@
-import styles from "./hero.module.scss";
+import styles from "./hero.module.scss"
 
-import Link from "next/link";
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -12,16 +12,20 @@ export default function Hero() {
         Build user interfaces using canvas as easy as it has never been
       </p>
       <div className={styles.links}>
-        <Link href="/" className={styles.link}>
+        <Link href="/how-to-use" className={styles.link}>
           How To Use
         </Link>
-        <Link href="/" className={styles.link + " " + styles.secondary}>
+        <a
+          href="/canvas-user-interface.js"
+          download
+          className={styles.link + " " + styles.secondary}
+        >
           Install
-        </Link>
-        <Link href="/" className={styles.link + " " + styles.secondary}>
+        </a>
+        <Link href="/examples" className={styles.link + " " + styles.secondary}>
           Examples
         </Link>
       </div>
     </section>
-  );
+  )
 }
