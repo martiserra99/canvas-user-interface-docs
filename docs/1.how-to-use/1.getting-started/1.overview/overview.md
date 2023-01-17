@@ -10,7 +10,7 @@ The way it works is by providing you a way to build elements (ex: image), place 
 The following code is a minimal example to demonstrate how it is used:
 
 ```javascript
-import { canvasUI } from "./canvas-user-interface.js"
+import canvasUI from "./canvas-user-interface.js"
 const ui = canvasUI.ui.new("#ui")
 const root = canvasUI.layout.new("root", "frame")
 const text = canvasUI.view.new("text-1", "text")
