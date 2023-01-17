@@ -5,14 +5,14 @@ title: View
 
 The view is a graphic that is displayed on the UI. There are different types of views and each one of them is drawn in a different way (ex: image and text).
 
-To create a view you have to call the function `canvasUI.view.new(id, type)`. The first argument is the id and the second argument is the type of view. The returned value is the view. That is an example:
+To create a view, you have to call the function `canvasUI.view.new(id, type)`. The first argument is the id and the second argument is the type of view. The returned value is the view. That is an example:
 
 ```javascript
-const text = canvasUI.view.new("text-1", "text");
+const text = canvasUI.view.new("text-1", "text")
 ```
 
-Every view has some properties that can be used to modify how it is drawn (ex: text). To change a property you have to use the `.set(property, value)` method, like so:
+Every view has some properties that can be used to modify how it is drawn (ex: text). To change a property, you have to use the `.set(property, value)` method, like so:
 
 ```javascript
-text.set("text", "Hello World!");
+text.set("text", "Hello World!")
 ```

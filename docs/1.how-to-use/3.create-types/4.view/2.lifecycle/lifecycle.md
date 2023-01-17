@@ -3,7 +3,7 @@ nav: Lifecycle
 title: Lifecycle
 ---
 
-The view element goes through different lifecycle states and it performs different tasks in each one of them:
+The view element goes through different lifecycle states, and it performs different tasks in each one of them:
 
 - **Create**: It may perform some initial tasks and store some data if needed.
 
@@ -17,7 +17,7 @@ The view element goes through different lifecycle states and it performs differe
 
 - **End**: It may perform some final tasks that may be needed.
 
-To perform these tasks the view will call its lifecycle functions. These functions are implemented differently by every view type and to implement them you have to use the `.lifecycle.set(name, func)` method, like so:
+To perform these tasks, the view will call its lifecycle functions. These functions are implemented differently by every view type and to implement them you have to use the `.lifecycle.set(name, func)` method, like so:
 
 ```javascript
 viewType.lifecycle.set("onCreate", function (view) {
