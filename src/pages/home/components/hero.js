@@ -12,7 +12,10 @@ export default function Hero() {
         Build user interfaces using canvas as easy as it has never been
       </p>
       <div className={styles.links}>
-        <Link href="/how-to-use" className={styles.link}>
+        <Link
+          href="/how-to-use/getting-started/overview"
+          className={styles.link}
+        >
           How To Use
         </Link>
         <a
