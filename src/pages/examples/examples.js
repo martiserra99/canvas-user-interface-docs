@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+import Head from "next/head"
 import Content from "./components/content"
 import Arrow from "./components/arrow"
 import Example from "./components/example"
@@ -27,6 +28,9 @@ export default function Examples() {
   }
   return (
     <>
+      <Head>
+        <title>Examples | Canvas User Interface</title>
+      </Head>
       <Content>
         <Arrow direction="left" onClick={handleLeft} />
         <Example src={examples[position]} />

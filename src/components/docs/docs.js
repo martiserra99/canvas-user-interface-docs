@@ -1,5 +1,6 @@
 import styles from "./docs.module.scss"
 
+import Head from "next/head"
 import { useState } from "react"
 
 import HeaderMobile from "./components/header-mobile/header-mobile"
@@ -12,6 +13,9 @@ export default function Docs({ slug, left, right, content }) {
   const [open, setOpen] = useState(false)
   return (
     <>
+      <Head>
+        <title>{content.title} | Canvas User Interface</title>
+      </Head>
       <HeaderMobile onClickMenu={() => setOpen(true)} />
       <OverlayMobile show={open} onClick={() => setOpen(false)} />
       <div className={styles.docs}>
