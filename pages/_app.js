@@ -1,6 +1,7 @@
 import "styles/globals.scss"
 
 import Head from "next/head"
+import Script from "next/script"
 import { getCookie, setCookie } from "cookies-next"
 
 import Layout from "src/layout/layout"
@@ -37,6 +38,23 @@ export default function App({ Component, pageProps }) {
             onRefuse={handleCookiesRefuse}
             onAccept={handleCookiesAccept}
           />
+        )}
+        {cookies === "accept" && (
+          <>
+            <Script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-R5D2ZPSLVB"
+            />
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                
+                gtag('config', 'G-R5D2ZPSLVB');
+              `}
+            </Script>
+          </>
         )}
       </Layout>
     </>
