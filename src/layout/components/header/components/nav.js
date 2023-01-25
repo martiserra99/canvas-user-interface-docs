@@ -1,14 +1,14 @@
-import styles from "./nav.module.scss";
+import styles from "./nav.module.scss"
 
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from "next/link"
+import { useRouter } from "next/router"
 
-import IcGithub from "src/layout/components/header/components/ic-github";
-import IcLinkedin from "src/layout/components/header/components/ic-linkedin";
-import IcWeb from "src/layout/components/header/components/ic-web";
+import IcGithub from "src/layout/components/header/components/ic-github"
+import IcLinkedin from "src/layout/components/header/components/ic-linkedin"
+import IcWeb from "src/layout/components/header/components/ic-web"
 
 export default function Nav() {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <nav className={styles.nav}>
       <div className={styles.links}>
@@ -30,7 +30,7 @@ export default function Nav() {
       </div>
       <div className={styles.icons}>
         <a
-          href="https://github.com/martiserra99"
+          href="https://github.com/martiserra99/canvas-user-interface"
           target="_blank"
           rel="noreferrer"
           className={styles.icon}
@@ -50,11 +50,11 @@ export default function Nav() {
         </a> */}
       </div>
     </nav>
-  );
+  )
 }
 
 function linkClassName(router, path) {
-  let className = styles.link;
-  if (router.pathname.startsWith(path)) className += ` ${styles.selected}`;
-  return className;
+  let className = styles.link
+  if (router.pathname.startsWith(path)) className += ` ${styles.selected}`
+  return className
 }

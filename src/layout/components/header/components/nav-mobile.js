@@ -39,7 +39,7 @@ export default function NavMobile({ open }) {
             </div>
             <div className={styles.icons}>
               <a
-                href="https://github.com/martiserra99"
+                href="https://github.com/martiserra99/canvas-user-interface"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.icon}
