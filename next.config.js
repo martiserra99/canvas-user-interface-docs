@@ -5,9 +5,9 @@ const nextConfig = {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
-    };
-    return config;
+    }
+    return config
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
