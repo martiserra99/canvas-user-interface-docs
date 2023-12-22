@@ -21,4 +21,4 @@ imageArea.set("border", { size: 10, color: "#E0A93B" })
 imageArea.set("corner", { type: "round", size: 10 })
 ```
 
-![imageArea](/docs/elements/composites/image-area.svg)
+![imageArea](/canvas-user-interface/docs/elements/composites/image-area.svg)

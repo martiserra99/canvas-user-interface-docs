@@ -19,4 +19,4 @@ text.set("font", {
 text.set("color", "#14213d")
 ```
 
-![text](/docs/elements/views/text.svg)
+![text](/canvas-user-interface/docs/elements/views/text.svg)
