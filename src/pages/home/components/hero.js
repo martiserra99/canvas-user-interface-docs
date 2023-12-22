@@ -9,7 +9,8 @@ export default function Hero() {
         The JavaScript Library To Build Canvas User Interfaces
       </h1>
       <p className={styles.subheadline}>
-        Build user interfaces using canvas as easy as it has never been
+        Build user interfaces with the HTML5 canvas element as easy as it has
+        never been
       </p>
       <div className={styles.links}>
         <Link
