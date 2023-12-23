@@ -5,7 +5,6 @@ const nextConfig = {
     config.resolve.fallback = { ...config.resolve.fallback, fs: false }
     return config
   },
-  basePath: "/canvas-user-interface",
 }
 
 module.exports = nextConfig
