@@ -16,15 +16,9 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="Canvas User Interface is a JavaScript library used to build user interfaces using the canvas element. It manages all the complexities of using the canvas to let you develop anything you want as easy as possible."
         />
-        <link rel="icon" href="/canvas-user-interface/favicon/favicon.png" />
-        <link
-          rel="apple-touch-icon"
-          href="/canvas-user-interface/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="manifest"
-          href="/canvas-user-interface/manifest.webmanifest"
-        />
+        <link rel="icon" href="/favicon/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <meta charSet="utf-8" />
       </Head>
       <Layout>
