@@ -24,4 +24,4 @@ area2.layoutParams.set("align", {
 area2.layoutParams.get("margin").right = 50
 ```
 
-![frame](/canvas-user-interface/docs/elements/layouts/frame.svg)
+![frame](/docs/elements/layouts/frame.svg)

@@ -18,4 +18,4 @@ area.set("border", { size: 10, color: "#e03b3d" })
 area.set("corner", { type: "round", size: 10 })
 ```
 
-![area](/canvas-user-interface/docs/elements/views/area.svg)
+![area](/docs/elements/views/area.svg)

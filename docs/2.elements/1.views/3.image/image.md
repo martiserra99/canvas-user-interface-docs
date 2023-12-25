@@ -16,4 +16,4 @@ image.set("size", {
 image.set("src", "/img/logo.svg")
 ```
 
-![image](/canvas-user-interface/docs/elements/views/image.svg)
+![image](/docs/elements/views/image.svg)

@@ -30,4 +30,4 @@ area2.layoutParams.set("attachTo", {
 area2.layoutParams.get("bias").horizontal = 50
 ```
 
-![relative](/canvas-user-interface/docs/elements/layouts/relative.svg)
+![relative](/docs/elements/layouts/relative.svg)
