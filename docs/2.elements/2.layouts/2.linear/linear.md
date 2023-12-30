@@ -16,4 +16,4 @@ linear.insert(area1)
 linear.insert(area2)
 ```
 
-![linear](/docs/elements/layouts/linear.svg)
+![linear](/elements/layouts/linear.svg)
