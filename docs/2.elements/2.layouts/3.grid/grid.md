@@ -27,4 +27,4 @@ area3.layoutParams.set("position", { row: 0, column: 1 })
 area3.layoutParams.set("span", { rows: 2, columns: 1 })
 ```
 
-![grid](/elements/layouts/grid.svg)
+![grid](/canvas-user-interface/docs/elements/layouts/grid.svg)
