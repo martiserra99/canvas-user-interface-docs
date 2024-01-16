@@ -10,18 +10,23 @@ The way it works is by providing you a way to build elements (ex: image), place 
 The following code is a minimal example to demonstrate how it is used:
 
 ```javascript
-import canvasUI from "./canvas-user-interface.js"
+import canvasUI from "canvas-user-interface"
+
 const ui = canvasUI.ui.new("#ui")
-const root = canvasUI.layout.new("root", "frame")
-const text = canvasUI.view.new("text-1", "text")
+
+const screen = canvasUI.layout.new("screen", "frame")
+const text = canvasUI.view.new("text", "text")
+
 text.set("text", "Hello World!")
 text.get("font").size = 30
-root.insert(text)
+
+screen.insert(text)
 text.layoutParams.set("align", {
   horizontal: "middle",
   vertical: "middle",
 })
-ui.start(root)
+
+ui.start(screen)
 ```
 
 Don't worry if you don't understand this code right away. We'll discuss in the next chapters how to use this library.

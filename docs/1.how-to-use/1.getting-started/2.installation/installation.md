@@ -3,16 +3,16 @@ nav: Installation
 title: Installation
 ---
 
-To start using this library you can download it from the home page, include the downloaded file in your project and import the `canvasUI` object, like so:
-
-```javascript
-import canvasUI from "./canvas-user-interface.js"
-```
-
-This is the main object, and it is the one you will use to build the user interface with its elements.
-
-You can also download the library from npm:
+This library is available in npm. You can download it doing the following:
 
 ```bash
 npm install canvas-user-interface
 ```
+
+Then, to use the library you have to import the `canvasUI` object:
+
+```javascript
+import canvasUI from "canvas-user-interface"
+```
+
+This is the main object, and it is the one you will use to build the user interface with its elements.

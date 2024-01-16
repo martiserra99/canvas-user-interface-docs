@@ -19,13 +19,12 @@ export default function Hero() {
         >
           How To Use
         </Link>
-        <a
-          href="/canvas-user-interface.js"
-          download
+        <Link
+          href="/how-to-use/getting-started/installation"
           className={styles.link + " " + styles.secondary}
         >
           Install
-        </a>
+        </Link>
         <Link href="/examples" className={styles.link + " " + styles.secondary}>
           Examples
         </Link>
